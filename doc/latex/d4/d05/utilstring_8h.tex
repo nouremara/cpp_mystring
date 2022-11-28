@@ -1,0 +1,66 @@
+\hypertarget{utilstring_8h}{}\doxysection{utilstring.\+h File Reference}
+\label{utilstring_8h}\index{utilstring.h@{utilstring.h}}
+
+
+implementation of own string class.  
+
+
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classutil_1_1string}{util\+::string}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceutil}{util}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{utilstring_8h_a40958a1382463445e451148e3a93e049}{INITIAL\+\_\+\+SIZE}}~10
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceutil_a7be55f4ae2f980e374fa1b9f33b5085a}{util\+::concat}} (char $\ast$raw\+Char\+Target, char $\ast$raw\+Char\+Source, size\+\_\+t start\+Position)
+\item 
+void \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{util\+::deep\+Copy}} (char $\ast$raw\+Char\+Target, const char $\ast$raw\+Char\+Source, size\+\_\+t dest\+Start\+Position, size\+\_\+t src\+End\+Position)
+\item 
+void \mbox{\hyperlink{namespaceutil_a2d640f1f28221d6aa6b9aacd805125b3}{util\+::print\+Header}} (const char $\ast$text)
+\item 
+void \mbox{\hyperlink{namespaceutil_a0cd6dff1a3ac1555425951b35597a45f}{util\+::print\+Sub\+Header}} (const char $\ast$text)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+implementation of own string class. 
+
+========================================================================
+
+this file presents an implementation of a class named string. This class behavior will be similar and compatible to the std\+::string. This file contains the prototypes for the class, its methods and eventually any macros, constants, or global variables you will need to use it.
+
+\begin{DoxyAuthor}{Author}
+\+: Nour Ahmed @email \+: \href{mailto:nahmed@stud.hs-bremen.de}{\texttt{ nahmed@stud.\+hs-\/bremen.\+de}}, nour @repo \+: \href{https://github.com/nouremara/cpp_mystring}{\texttt{ https\+://github.\+com/nouremara/cpp\+\_\+mystring}} 
+\end{DoxyAuthor}
+\hypertarget{utilstring_8h_autotoc_md2}{}\doxysubsection{@created\+On      \+:  23.\+11.\+2022}\label{utilstring_8h_autotoc_md2}
+
+
+Definition in file \mbox{\hyperlink{utilstring_8h_source}{utilstring.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{utilstring_8h_a40958a1382463445e451148e3a93e049}\label{utilstring_8h_a40958a1382463445e451148e3a93e049}} 
+\index{utilstring.h@{utilstring.h}!INITIAL\_SIZE@{INITIAL\_SIZE}}
+\index{INITIAL\_SIZE@{INITIAL\_SIZE}!utilstring.h@{utilstring.h}}
+\doxysubsubsection{\texorpdfstring{INITIAL\_SIZE}{INITIAL\_SIZE}}
+{\footnotesize\ttfamily \#define INITIAL\+\_\+\+SIZE~10}
+
+
+
+Definition at line \mbox{\hyperlink{utilstring_8h_source_l00033}{33}} of file \mbox{\hyperlink{utilstring_8h_source}{utilstring.\+h}}.
+

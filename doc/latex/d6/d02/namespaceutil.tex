@@ -1,0 +1,125 @@
+\hypertarget{namespaceutil}{}\doxysection{util Namespace Reference}
+\label{namespaceutil}\index{util@{util}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classutil_1_1string}{string}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespaceutil_a0ba3aab2318d3c284debce908db73718}{operator$<$$<$}} (std\+::ostream \&iostream, const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&my\+String)
+\item 
+bool \mbox{\hyperlink{namespaceutil_a3cee572eca0c7cee1b82eb9ecd9c3faa}{operator==}} (const std\+::string \&lhs\+String, const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&rhs\+String)
+\item 
+bool \mbox{\hyperlink{namespaceutil_a9a9987eba9df6310a3aa16cb92566da2}{operator==}} (const char $\ast$lhs\+Char\+Array, const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&rhs\+String)
+\item 
+bool \mbox{\hyperlink{namespaceutil_ab1488ae992e5703bb0fc4d3ff416324e}{operator!=}} (const std\+::string \&lhs\+String, const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&rhs\+String)
+\item 
+bool \mbox{\hyperlink{namespaceutil_ad86672dee0d1e24a85369ab88cea0c51}{operator!=}} (const char $\ast$lhs\+Char\+Array, const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&rhs\+String)
+\item 
+void \mbox{\hyperlink{namespaceutil_a7be55f4ae2f980e374fa1b9f33b5085a}{concat}} (char $\ast$raw\+Char\+Target, char $\ast$raw\+Char\+Source, size\+\_\+t start\+Position)
+\item 
+void \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{deep\+Copy}} (char $\ast$raw\+Char\+Target, const char $\ast$raw\+Char\+Source, size\+\_\+t dest\+Start\+Position, size\+\_\+t src\+End\+Position)
+\item 
+void \mbox{\hyperlink{namespaceutil_a2d640f1f28221d6aa6b9aacd805125b3}{print\+Header}} (const char $\ast$text)
+\item 
+void \mbox{\hyperlink{namespaceutil_a0cd6dff1a3ac1555425951b35597a45f}{print\+Sub\+Header}} (const char $\ast$text)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceutil_a7be55f4ae2f980e374fa1b9f33b5085a}\label{namespaceutil_a7be55f4ae2f980e374fa1b9f33b5085a}} 
+\index{util@{util}!concat@{concat}}
+\index{concat@{concat}!util@{util}}
+\doxysubsubsection{\texorpdfstring{concat()}{concat()}}
+{\footnotesize\ttfamily void util\+::concat (\begin{DoxyParamCaption}\item[{char $\ast$}]{raw\+Char\+Target,  }\item[{char $\ast$}]{raw\+Char\+Source,  }\item[{size\+\_\+t}]{start\+Position }\end{DoxyParamCaption})}
+
+fill raw\+Char\+Target with raw\+Char\+Source starting from start\+Position
+
+Notes\+: \begin{quote}
+raw\+Char\+Target contents will be changed the raw\+Char\+Target is assumed to be big enough to hold the raw\+Char\+Source (i.\+e., its size is larger than or equal to that of the raw\+Char\+Source) \end{quote}
+
+
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00357}{357}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+
+\mbox{\Hypertarget{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}\label{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}} 
+\index{util@{util}!deepCopy@{deepCopy}}
+\index{deepCopy@{deepCopy}!util@{util}}
+\doxysubsubsection{\texorpdfstring{deepCopy()}{deepCopy()}}
+{\footnotesize\ttfamily void util\+::deep\+Copy (\begin{DoxyParamCaption}\item[{char $\ast$}]{raw\+Char\+Target,  }\item[{const char $\ast$}]{raw\+Char\+Source,  }\item[{size\+\_\+t}]{dest\+Start\+Position,  }\item[{size\+\_\+t}]{src\+End\+Position }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00378}{378}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+
+\mbox{\Hypertarget{namespaceutil_ad86672dee0d1e24a85369ab88cea0c51}\label{namespaceutil_ad86672dee0d1e24a85369ab88cea0c51}} 
+\index{util@{util}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!util@{util}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool util\+::operator!= (\begin{DoxyParamCaption}\item[{const char $\ast$}]{lhs\+Char\+Array,  }\item[{const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&}]{rhs\+String }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00342}{342}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+
+\mbox{\Hypertarget{namespaceutil_ab1488ae992e5703bb0fc4d3ff416324e}\label{namespaceutil_ab1488ae992e5703bb0fc4d3ff416324e}} 
+\index{util@{util}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!util@{util}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool util\+::operator!= (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{lhs\+String,  }\item[{const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&}]{rhs\+String }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00337}{337}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+
+\mbox{\Hypertarget{namespaceutil_a0ba3aab2318d3c284debce908db73718}\label{namespaceutil_a0ba3aab2318d3c284debce908db73718}} 
+\index{util@{util}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!util@{util}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream \& util\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{iostream,  }\item[{const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&}]{my\+String }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00319}{319}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+
+\mbox{\Hypertarget{namespaceutil_a9a9987eba9df6310a3aa16cb92566da2}\label{namespaceutil_a9a9987eba9df6310a3aa16cb92566da2}} 
+\index{util@{util}!operator==@{operator==}}
+\index{operator==@{operator==}!util@{util}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool util\+::operator== (\begin{DoxyParamCaption}\item[{const char $\ast$}]{lhs\+Char\+Array,  }\item[{const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&}]{rhs\+String }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00331}{331}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+
+\mbox{\Hypertarget{namespaceutil_a3cee572eca0c7cee1b82eb9ecd9c3faa}\label{namespaceutil_a3cee572eca0c7cee1b82eb9ecd9c3faa}} 
+\index{util@{util}!operator==@{operator==}}
+\index{operator==@{operator==}!util@{util}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool util\+::operator== (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{lhs\+String,  }\item[{const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&}]{rhs\+String }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00326}{326}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+
+\mbox{\Hypertarget{namespaceutil_a2d640f1f28221d6aa6b9aacd805125b3}\label{namespaceutil_a2d640f1f28221d6aa6b9aacd805125b3}} 
+\index{util@{util}!printHeader@{printHeader}}
+\index{printHeader@{printHeader}!util@{util}}
+\doxysubsubsection{\texorpdfstring{printHeader()}{printHeader()}}
+{\footnotesize\ttfamily void util\+::print\+Header (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00394}{394}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+
+\mbox{\Hypertarget{namespaceutil_a0cd6dff1a3ac1555425951b35597a45f}\label{namespaceutil_a0cd6dff1a3ac1555425951b35597a45f}} 
+\index{util@{util}!printSubHeader@{printSubHeader}}
+\index{printSubHeader@{printSubHeader}!util@{util}}
+\doxysubsubsection{\texorpdfstring{printSubHeader()}{printSubHeader()}}
+{\footnotesize\ttfamily void util\+::print\+Sub\+Header (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00408}{408}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+
