@@ -17,10 +17,6 @@
  * @createdOn      :  23.11.2022
  *========================================================================**/
 
-// see: https://gist.github.com/philipheimboeck/099e540d800063e3e6ec
-// see: https://codereview.stackexchange.com/questions/98329/stdstring-implementation
-// see: https://en.wikipedia.org/wiki/Snake_case
-
 #ifndef UTILSTRING_H
 #define UTILSTRING_H
 
