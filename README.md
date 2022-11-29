@@ -1,4 +1,4 @@
-# cpp_mystring
+# my_cpp_string
 > Implementation of Own String Class
  
  In this presents an implementation of a class named `util::string`. This class behavior is similar to the `std::string` and both  `std::string` and this `util::string` class are compatible.
@@ -11,10 +11,12 @@ Full and detailed examples of uses and tests of the class `util::string` are giv
 The following design and implementation criteria are followed:
 * No C/C++ standard functions or classes are used to realize `util::string` class. This include, e.g., `strcmp`, `strlen` and of course using `std::string` as an internal representation of `util::string`.
   * This means own functions/methods are developed and implemented to calculate the length of a `char*`, to compare character sequences or to copy them full or partially.
-* For now, **no error handling** (e.g., accessing an invalid index by using operator []) is implemented. THis may be done later.
+* For now, **no error handling** (e.g., accessing an invalid index by using operator []) is implemented. This may be done later.
   * **Use this class at your own risk** :).
-* THe code follows [LLVM Coding Standards](https://llvm.org/docs/CodingStandards.html).
+* The code follows [LLVM Coding Standards](https://llvm.org/docs/CodingStandards.html).
 * The *[sanke_case](https://en.wikipedia.org/wiki/Snake_case)* naming convention is used for variable and function names (with few exceptions).
+
+* **Use this class at your own risk** :).
 
  ## General Functionality
 * The class `util::string` is implemented inside the two files `utilstring.cpp` and `utilstring.h`
