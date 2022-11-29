@@ -9,7 +9,7 @@ Full and detailed examples of uses and tests of the class `util::string` are giv
 
 
 The following design and implementation criteria are followed:
-* No C/C++ standard functions or classes are used to realize `util::string` class. This include, e.g., `strcmp`, `strlen` and of course using `std::string` as an internal representation of `util::string`.
+* **No C/C++ standard functions or classes are used** to realize `util::string` class. This include, e.g., `strcmp`, `strlen` and of course using `std::string` as an internal representation of `util::string`.
   * This means own functions/methods are developed and implemented to calculate the length of a `char*`, to compare character sequences or to copy them full or partially.
 * For now, **no error handling** (e.g., accessing an invalid index by using operator []) is implemented. This may be done later.
   * **Use this class at your own risk** :).
