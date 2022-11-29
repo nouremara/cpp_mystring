@@ -1,32 +1,8 @@
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@nouremara 
-github
-/
-gitignore
-Public
-Code
-Pull requests
-344
-Actions
-Security
-Insights
-gitignore/Qt.gitignore
-@Icreatedthistodeletemyaccounts
-Icreatedthistodeletemyaccounts Remove trailing whitespace
-Latest commit 1a84870 on Jul 11, 2021
- History
- 16 contributors
-@martonmiklos@KoynovStas@timsueberkrueb@davidebeatrici@abrodkin@varhub@tsteinholz@nocnokneo@Ebola16@misterion@munkhoff@jspahrsummers
-54 lines (46 sloc)  623 Bytes
+# output and build artifacts
+debug/*
+release/*
 
 # C++ objects and libs
 *.slo

@@ -5,6 +5,12 @@
 
 Full and detailed examples of uses and tests of the class `util::string` are given in the `main.cpp` file. Each method and operator is very carefully tested (e.g., concatenating different strings, ..., etc).
 
+An example test run is shown in the following screenshot:
+<img src="doc/figures/screenshot.png" alt="fishy" width="400px">
+
+Note that the **terminal output is cloned** (using [ANSI escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code)) for better visibility.
+
+
 **Doxygen** generated documentation (in html and LaTeX formats) can be found at [`doc/html/index.html`](doc/html/index.html) and [`doc/latex/refman.pdf`](doc/latex/refman.pdf), respectively. The configuration file `Doxyfile` is used with the Doxygen generation tool.
 
 
