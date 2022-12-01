@@ -3,14 +3,16 @@
 // Assignment 1 – Own String Class
 
 /**========================================================================
- * @file           :  utilstring.cpp
- * @author         :  Nour Ahmed
- * @email          :  nahmed@stud.hs-bremen.de, nourbrm02@gmail.com
- * @repo           :  https://github.com/nouremara/cpp_mystring
- * @createdOn      :  23.11.2022
- * @description    :  implementation of own string class
+ * @file        : utilstring.cpp
+ * @brief       : implementation of own string class.
+ * @author      : Nour Ahmed
+ * @email       : nahmed@stud.hs-bremen.de, nourbrm02@gmail.com
+ * @repo        : https://github.com/nouremara/cpp_mystring
+ * @createdOn   : 23.11.2022
+ * @version     : 1.0.0
+ * @description : implementation of own string class
  *
- * this file presents an implementation of a class named string.
+ * This file presents an implementation of a class named string.
  * This class behavior will be similar to the std::string and both
  * std::string and this string class are compatible.
  *========================================================================**/
@@ -68,9 +70,29 @@ void string::intialize_string(size_t length) {
 //-------------------------------------------------------------
 
 size_t string::size() const { return rawSize(internal_buffer); }
-
 size_t string::length() const { return rawSize(internal_buffer); }
 //-------------------------------------------------------------
+
+/**
+* Returns the size of the storage space currently allocated for the
+* string, expressed in terms of bytes.
+*/
+size_t string::capacity() const {
+    return buffer_size;
+}
+//-------------------------------------------------------------
+
+/**
+* Clears your string object
+* Erases the contents of the string, which becomes an empty string (with
+* a length of 0 characters).
+*/
+void string::clear(){
+    // we only need to set the termination character to the first postion
+    // to indicate that the string is empty
+    // initialize an empty string
+    internal_buffer[0] = '\0';
+}
 
 size_t string::rawSize(const char *rawChar) {
   size_t length = 0;
@@ -165,8 +187,6 @@ int string::compare(const char *lhsCharArray, const char *rhsCharArray) {
  *                         Operators                                       *
  *=========================================================================*/
 
-//-------------------------------------------------------------
-
 string &string::operator=(const string &rhsString) {
   deepCopy(rhsString.c_str());
   return *this;
@@ -250,6 +270,22 @@ string &string::operator+=(const string &rhsString) {
 }
 //-------------------------------------------------------------
 
+string& string::operator+=(const std::string& rhsString) {
+    size_t total_size = size() + rhsString.size() + 1;
+    char* temp = new char[total_size];
+
+    util::deepCopy(temp, internal_buffer, 0);
+    util::deepCopy(temp, rhsString.c_str(), size());
+
+    delete[] internal_buffer;
+
+    internal_buffer = temp;
+    buffer_size = total_size;
+   
+    return *this;
+}
+//-------------------------------------------------------------
+
 /**
  *	concatenating util::string and const char*
  */
@@ -279,6 +315,16 @@ string string::operator+(const string& rhsString) {
 }
 //-------------------------------------------------------------
 
+string string::operator+(const std::string& rhsString) {
+    string temp(size() + rhsString.size());
+
+    util::deepCopy(temp.c_str(), internal_buffer, 0);
+    util::deepCopy(temp.c_str(), rhsString.c_str(), size());
+
+    return temp;
+}
+//-------------------------------------------------------------
+
 string string::operator+(const char* rhsString) {
     string temp(size() + rawSize(rhsString));
 
@@ -287,17 +333,15 @@ string string::operator+(const char* rhsString) {
 
     return temp;
 }
-//-------------------------------------------------------------
 
 /*====================================================================================*
- * non-member functions and operator methods for the cases util::string is on
- *the rhs *
+ * non-member (friend) functions and operator methods for the cases                   *
+ * util::string is on the RHS                                                         *
  *====================================================================================*/
 
 std::ostream &operator<<(std::ostream &iostream, const util::string &myString) {
   return (iostream << myString.c_str());
 }
-
 //-------------------------------------------------------------
 
 bool operator==(const std::string &lhsString, const util::string &rhsString) {
@@ -320,7 +364,11 @@ bool operator!=(const char *lhsCharArray, const util::string &rhsString) {
   // note that compare returns 0 when the two strings are equal
   return util::string::compare(lhsCharArray, rhsString.c_str());
 }
-//-------------------------------------------------------------
+
+
+/*=========================================================================*
+*             Some Utility functions                                      *
+*=========================================================================*/
 
 /**
  * fill rawCharTarget with rawCharSource starting from startPosition
@@ -330,28 +378,11 @@ bool operator!=(const char *lhsCharArray, const util::string &rhsString) {
  *	> the rawCharTarget is assumed to be big enough to hold the
  *rawCharSource (i.e., its size is larger than or equal to that of the
  *rawCharSource)
- */
-void concat(char *rawCharTarget, char *rawCharSource, size_t startPosition) {
-  // if the startPosition is not given (we have its default -1)
-  // do a normal concatenation of the two strings)
-  // note that at the given position the lhs \0 termination will be
-  // overwritten as this copy starts at its position
-  if (startPosition == -1) {
-    startPosition = util::string::rawSize(rawCharTarget);
-  }
-
-  // deep copy rawCharSource into rawCharTarget beginning at startPosition
-  for (size_t j = 0; rawCharSource[j] != '\0'; ++j, ++startPosition) {
-    rawCharTarget[startPosition] = rawCharSource[j];
-  }
-
-  // ensure destination string is null terminated
-  rawCharTarget[startPosition] = '\0';
-}
-
-// destStartPosition  default is to first location of the destRawChar
-// srcEndPosition	  default is to last character (before the \0) of the
-// srcRawChar
+ 
+* destStartPosition  default is to first location of the destRawChar
+* srcEndPosition	  default is to last character (before the \0) of the
+* srcRawChar
+*/
 void deepCopy(char *rawCharTarget, const char *rawCharSource,
               size_t destStartPosition, size_t srcEndPosition) {
   // check and adjust for default values
@@ -371,13 +402,25 @@ void deepCopy(char *rawCharTarget, const char *rawCharSource,
   // ensure destination string is null terminated
   rawCharTarget[destStartPosition] = '\0';
 }
-//-------------------------------------------------
+
+/*=========================================================================*
+ *      Some Utility functions for printing nice text output               *
+ *=========================================================================*/
+
+ /**
+* utility functions for printing nice text output
+* 
+* ANSI Escape Sequences are used to color the console text, 
+* it works for windows and Linux. 
+* For Windows, you need to run the program in the new terminal as the old one
+* does not support these codes.
+* see: https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797
+*/
 void printHeader(const char *text) {
   size_t spaces_needed = (80 - util::string::rawSize(text)) / 2 - 2;
 
-  std::cout << "\033[96m"; // set text and background colors
-  std::cout << "---------------------------------------------------------------"
-               "----------------\n-";
+  std::cout << "\033[1;30;106m"; // set text and background colors
+  std::cout << "-------------------------------------------------------------------------------\n-";
   for (int i = 0; i < spaces_needed; ++i) {
     std::cout << " ";
   }
@@ -386,8 +429,7 @@ void printHeader(const char *text) {
     std::cout << " ";
   }
   std::cout << " -\n";
-  std::cout << "---------------------------------------------------------------"
-               "----------------\n";
+  std::cout << "-------------------------------------------------------------------------------\n";
   std::cout << "\033[0m"; // reset text and background colors
 }
 
@@ -396,5 +438,12 @@ void printSubHeader(const char *text) {
   std::cout << text;
   std::cout << "\033[0m\n"; // reset text and background colors
 }
+
+void printTestCase(const char* text) {
+    std::cout << "\033[93m  > ["; // set text and background colors
+    std::cout << text;
+    std::cout << "]\033[0m \t"; // reset text and background colors
+}
+
 
 } // namespace util

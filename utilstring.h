@@ -3,24 +3,20 @@
 // Assignment 1 – Own string Class
 
 /**========================================================================
- * @file  utilstring.h
- * @brief implementation of own string class.
+ * @file      : utilstring.h
+ * @brief     : implementation of own string class.
+ * @author    : Nour Ahmed
+ * @email     : nahmed@stud.hs-bremen.de, nour
+ * @repo      : https://github.com/nouremara/cpp_mystring
+ * @createdOn : 23.11.2022
+ * @version   : 1.0.0
+ * @description :
  *
- * this file presents an implementation of a class named string.
+ * This file presents an implementation of a class named string.
  * This class behavior will be similar and compatible to the std::string.
  * This file contains the prototypes for the class, its methods and eventually
  * any macros, constants, or global variables you will need to use it.
- *
- * @author         :  Nour Ahmed
- * @email          :  nahmed@stud.hs-bremen.de, nour
- * @repo           :  https://github.com/nouremara/cpp_mystring
- * @createdOn      :  23.11.2022
  *========================================================================**/
-
- // see: https://gist.github.com/philipheimboeck/099e540d800063e3e6ec
- // see:
- // https://codereview.stackexchange.com/questions/98329/stdstring-implementation
- // see: https://en.wikipedia.org/wiki/Snake_case
 
 #ifndef UTILSTRING_H
 #define UTILSTRING_H
@@ -52,10 +48,7 @@ namespace util {
 
 		void intialize_string(size_t length = 0);
 		void deepCopy(const char* rawChar, size_t startPosition = 0);
-		// void concat(char* rawCharTarget, 
-		//             const char* rawCharSource, 
-		//             size_t startPosition = 0);
-
+	
 		// Returns a pointer to an array that contains a null-terminated
 		// sequence of characters(i.e., a C-string) representing the current
 		// value of the string object.
@@ -67,26 +60,47 @@ namespace util {
 		// Allows raw access to the internal C-string (through its char* pointer)
 		char* c_str() const;
 
-		bool compare(const char* charArray) const;
+		//bool compare(const char* charArray) const;
 		static int compare(const char* s1, const char* s2);
 
-		// Clears your string object
-		// Erases the contents of the string, which becomes an empty string(with
-		// a length of 0 characters).
+		/** 
+		 * Clears your string object
+		 * Erases the contents of the string, which becomes an empty string(with
+		 * a length of 0 characters).
+		 */
 		void clear();
 
-		size_t size() const; /*!< Get the length of the string */
-		static size_t rawSize(const char* rawChar);
 
-		// Returns the amount of characters of your string excluding \0.
-		// Might be smaller than the actual reserved memory.
+		/**
+         * Get the amount of characters of a raw char* string excluding the terminating \0.
+		 */
+		static size_t rawSize(const char* rawChar); 
+
+		/** 
+		 * Returns the amount of characters of your string excluding \0.
+		 * Might be smaller than the actual reserved memory. 
+		*/
 		size_t length() const;
+		size_t size() const; /*!< Get the length of the string synonyme to length()*/
+
+		/**
+		 * Returns the size of the storage space currently allocated for the 
+		 * string, expressed in terms of bytes.
+		 */
+		size_t capacity() const;
+
 
 		/*================== Operators ====================*/
+
+		/**
+		* Operator + such that string, std::string and (const) char* can be added
+		*/
 		string operator+(const string& rhsString);
+		string operator+(const std::string& rhsString);
 		string operator+(const char* strInstance);
 
 		string& operator+=(const string& rhsString);
+		string& operator+=(const std::string& rhsString);
 		string& operator+=(const char* strInstance);
 
 		string& operator=(const string& rhsString);
@@ -108,25 +122,19 @@ namespace util {
 		 *=========================================================================*/
 		 // Free operator methods for the cases util::string is on the rhs
 		 // Friendship enables access to private members
-		friend std::ostream& operator<<(std::ostream& iostream,
-			const util::string& myString);
+		friend std::ostream& operator<<(std::ostream& iostream, const util::string& myString);
 
-		friend bool operator==(const std::string& lhsString,
-			const util::string& rhsString);
-		friend bool operator==(const char* lhsCharArray,
-			const util::string& rhsString);
+		friend bool operator==(const std::string& lhsString, const util::string& rhsString);
+		friend bool operator==(const char* lhsCharArray, const util::string& rhsString);
 
-		friend bool operator!=(const std::string& lhsString,
-			const util::string& rhsString);
-		friend bool operator!=(const char* lhsCharArray,
-			const util::string& rhsString);
+		friend bool operator!=(const std::string& lhsString, const util::string& rhsString);
+		friend bool operator!=(const char* lhsCharArray, const util::string& rhsString);
 	};
 
 	/*=========================================================================*
 	 *             Some Utility functions                                      *
 	 *=========================================================================*/
-	void concat(char* rawCharTarget, char* rawCharSource,
-		size_t startPosition = -1);
+	//void concat(char* rawCharTarget, char* rawCharSource, size_t startPosition = -1);
 
 	void deepCopy(char* rawCharTarget, const char* rawCharSource,
 		size_t destStartPosition = -1, size_t srcEndPosition = -1);
@@ -134,6 +142,8 @@ namespace util {
 	//-----------------------------------------------
 	void printHeader(const char* text);
 	void printSubHeader(const char* text);
+	void printTestCase(const char* text);
+
 
 } // namespace util
 

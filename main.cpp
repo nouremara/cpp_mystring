@@ -3,14 +3,17 @@
 // Assignment 1 – Own string Class
 
 /**============================================================================
- * @file           :  main.h
- * @author         :  Nour Ahmed
- * @email          :  nahmed@stud.hs-bremen.de, nour
- * @repo           :
- * @createdOn      :  23.11.2022
- * @description    :  Defines the entry point for the application
+ * @file        : main.cpp
+ * @brief       : test of own implementation of string class
+ * @author      : Nour Ahmed
+ * @email       : nahmed@stud.hs-bremen.de, nour
+ * @repo        : https://github.com/nouremara/cpp_mystring
+ * @repo        :
+ * @createdOn   : 23.11.2022
+ * @version     : 1.0.0
+ * @description : 
  *
- *
+ * Defines the entry point for the NourUtilString application
  * In this application the class util::string is used and tested.
  * Each method and operator is tested with all possible uasges (e.g.,
  * concatenating different strings etc.)
@@ -33,172 +36,153 @@ int main() {
 	util::string string4(stdString);
 	util::string string5(string4);
 
-	// header -----------------------------------------------------------------
-  /*  for (int k = 1; k < 255; k++)
-	{
-		std::cout << "\n";
-		std::cout << k << "\x1B[" << k << "m  Texting\033[0m\t\t";
-	}*/
-
-
 	util::printHeader("NourUtilString Application");
-	std::cout << "- Nour Ahmed                                                                  -" << std::endl;
+	std::cout << "\033[1;30;106m- Nour Ahmed                                                                  -" << std::endl;
 	std::cout << "- Matrikal-Nr.: 5200991                                                       -" << std::endl;
 	std::cout << "- Assignment 1 - Own string Class                                             -" << std::endl;
-	std::cout << "-------------------------------------------------------------------------------\n\n";
+	std::cout << "-------------------------------------------------------------------------------\033[0m\n\n";
 
 	// Test Object Instantiation ----------------------------------------------
 	util::printSubHeader("Variable used for testing and their values");
 	std::cout << "Variable used for testing and their values" << std::endl;
 
-	std::cout << " > [charArray]  charArray (size: " << util::string::rawSize(charArray) << ")  : " << charArray << std::endl;
-	std::cout << " > [stdString]  charArray (size: " << stdString.length() << ")  : " << stdString << std::endl;
+	util::printTestCase("charArray");
+	std::cout << "charArray (size: " << util::string::rawSize(charArray) << ")  : " << charArray << std::endl;
+	
+	util::printTestCase("stdString");
+	std::cout << "charArray (size: " << stdString.length() << ")  : " << stdString << std::endl;
 
 	std::cout << "-------------------------------------------------------------------------------\n\n";
 
 	util::printSubHeader("Test object constructors and initialization");
-	std::cout << " > [test with default constructors]  string1 (size: " << string1.size() << ")  : " << string1 << std::endl;
-	std::cout << " > [test with const char*]           string2 (size: " << string2.size() << ") : " << string2 << std::endl;
-	std::cout << " > [test with std::string]           string3 (size: " << string3.size() << ") : " << string3 << std::endl;
-	std::cout << " > [test with char array]            string4 (size: " << string4.size() << ") : " << string4 << std::endl;
-	std::cout << " > [test with util::string]          string5 (size: " << string5.size() << ") : " << string4 << std::endl;
+
+	util::printTestCase("default constructor");
+	std::cout << "\tstring1 (size: " << string1.size() << ")  : " << string1 << std::endl;
+	
+	util::printTestCase("constructor with const char*");
+	std::cout << "string2 (size: " << string2.size() << ") : " << string2 << std::endl;
+	
+	util::printTestCase("constructor with std::string");
+	       std::cout << "string3 (size: " << string3.size() << ") : " << string3 << std::endl;
+	
+	util::printTestCase("constructor with char array");
+	std::cout << "string4 (size: " << string4.size() << ") : " << string4 << std::endl;
+	
+	util::printTestCase("constructor with util::string");
+	std::cout << "string5 (size: " << string5.size() << ") : " << string4 << std::endl;
 	std::cout << "-------------------------------------------------------------------------------\n\n";
 
 
 	// Test member methods ---------------------------------------------------------
 	util::printSubHeader("Test Member Methods");
+
+
+	util::printTestCase("length()");
+	std::cout << "string2 (size: " << string2.size() << ", capacity: " << string2.capacity() << ") : " << string2 << std::endl;
+	
+	util::printTestCase("size()");
+	std::cout << "string2 (size: " << string2.size() << ", capacity: " << string2.capacity() << ") : " << string2 << std::endl;
+
+	util::printTestCase("capacity()");
+	std::cout << "string2 (size: " << string2.size() << ", capacity: " << string2.capacity() << ") : " << string2 << std::endl;
+
 	util::string temp = string2.substr(3, 5);
-	std::cout << " > [test substr()]           string2 (size: " << string2.size() << ") : " << string2 << std::endl;
-	std::cout << " > [test substr()]           substr(3,5) (size: " << temp.size() << ") : " << temp << std::endl;
+	util::printTestCase("substr()");
+	std::cout << "string2.substr(3,5) \t -> " << temp << std::endl;
 
+	util::printTestCase("c_str()");
+	std::cout << "string2.c_str() \t -> " << string2.c_str() << std::endl;
 
-
+	string2.clear();
+	util::printTestCase("clear()");
+	std::cout << "string2.clear() -> string2 (size: " << string2.size() << ", capacity: " << string2.capacity() << ") : content: " << string2 << std::endl;
 	std::cout << "-------------------------------------------------------------------------------\n\n";
 
 	// Test operators ---------------------------------------------------------
 	util::printSubHeader("Test operators");
 
-	std::cout << "[test << operator std::cout << util::string << int << std::string << char *]:\n\t"
-		<< string2 << ", "
-		<< "size: "
-		<< string2.size() << ", "
+	util::printTestCase("operator <<");
+	std::cout << "std::cout << util::string << int << std::string << char *:\n"
+		<< "    string3 (size: " << string3.size() << ", capacity: " << string3.capacity() << ") : content: " << string3
 		<< stdString << ", "
 		<< charArray
 		<< std::endl;
 	std::cout << "-------------------------------------------------------------------------------\n\n";
 
-	//string2 = string2 + string3;
-	std::cout << "> [test + operator util::string + util::string] \n  string2 + string3 -> " << string2 + string3 << std::endl;
+	util::printTestCase("operator +");
+	std::cout << "\n\tutil::string + util::string \t: string2 + string3 -> " << string2 + string3 << std::endl;
 
 	string5 = string5 + " see how + operator with char * works";
-	std::cout << "> [test + operator util::string + const char*] \n  string5 = string5 + const char* -> (size: "
-		<< string5.size() << ") : " << string5;
+	std::cout << "\tutil::string + const char* \t: string5 = string5 + const char* -> (size: "	<< string5.size() << ") : " << string5;
 	std::cout << "\n-------------------------------------------------------------------------------\n\n";
 
 	string4 += string3;
-	std::cout << "> [test += operator with util::string] \n  string4 += string3 -> (size: "
-		<< string4.size() << ") : " << string4 << std::endl;
+	util::printTestCase("operator +=");
+	std::cout << "\n\twith util::string\t: string4 += string3 -> (size: " << string4.size() << ") : " << string4 << std::endl;
 
 	string4 += " here += operator is used to add more text in char *";
-	std::cout << "> [test += operator with const char*] \n  string4 += const char* -> (size: "
-		<< string4.size() << ") : " << string4 << std::endl;
+	std::cout << "\twith const char* \t: string4 += const char* -> (size: " << string4.size() << ") : " << string4 << std::endl;
 	std::cout << "-------------------------------------------------------------------------------\n\n";
 
 
-	string1 = string2;
+	string1 = string4;
 	string2 = "more text for testing";
 	string3 = std::string("text for std::string assignment");
 
-	std::cout << "[test = operator util::string = util::string]\n\t string1 = string2 -> string1 (size: " << string1.size() << "): " << string1 << std::endl;
-	std::cout << "[test = operator util::string = const char*]\n\t string2 = \"...\" -> string2 (size: " << string2.size() << "): " << string2 << std::endl;
-	std::cout << "[test = operator util::string = std::string]\n\t string3 = std::string(\"...\") -> string3 (size: " << string3.size() << "): " << string3 << std::endl;
-
+	util::printTestCase("operator =");
+	std::cout << "\n\tutil::string = util::string\t string1 = string4 -> string1 (size: " << string1.size() << "): " << string1 << std::endl;
+	std::cout << "\tutil::string = const char* \t string2 = \"...\" -> string2 (size: " << string2.size() << "): " << string2 << std::endl;
+	std::cout << "\tutil::string = std::string \t string3 = std::string(\"...\") -> string3 (size: " << string3.size() << "): " << string3 << std::endl;
 	std::cout << "-------------------------------------------------------------------------------\n\n";
 
 	string1 = string2;
-	std::cout << "[test == operator util::string == util::string]\n\t string1 == string2   -> " << ((string1 == string2) ? "true" : "false") << std::endl;
-
-	std::cout << "[test == operator util::string == std::string]\n\t string1 == stdString -> " << ((string1 == stdString) ? "true" : "false") << std::endl;
-	std::cout << "[test == operator std::string == util::string]\n\t stdString == string1 -> " << ((stdString == string1) ? "true" : "false") << std::endl;
-
-	std::cout << "[test == operator util::string == const char*]\n\t string1 == charArray -> " << ((string1 == charArray) ? "true" : "false") << std::endl;
-	std::cout << "[test == operator const char* == util::string]\n\t charArray == string1 -> " << ((charArray == string1) ? "true" : "false") << std::endl;
-
+	util::printTestCase("operator ==");
+	std::cout << "\n\tutil::string == util::string \t string1   == string2   -> " << ((string1 == string2) ? "true" : "false") << std::endl;
+	std::cout << "\tutil::string == std::string  \t string1   == stdString -> " << ((string1 == stdString) ? "true" : "false") << std::endl;
+	std::cout << "\tstd::string  == util::string \t stdString == string1   -> " << ((stdString == string1) ? "true" : "false") << std::endl;
+	std::cout << "\tutil::string == const char*  \t string1   == charArray -> " << ((string1 == charArray) ? "true" : "false") << std::endl;
+	std::cout << "\tconst char*  == util::string \t charArray == string1   -> " << ((charArray == string1) ? "true" : "false") << std::endl;
 	std::cout << "-------------------------------------------------------------------------------\n\n";
 
-	std::cout << "[test != operator util::string != util::string]\n\t string1 != string2   -> " << ((string1 != string2) ? "true" : "false") << std::endl;
-
-	std::cout << "[test != operator util::string != std::string]\n\t string1 != stdString -> " << ((string1 != stdString) ? "true" : "false") << std::endl;
-	std::cout << "[test != operator std::string != util::string]\n\t stdString != string1 -> " << ((stdString != string1) ? "true" : "false") << std::endl;
-
-	std::cout << "[test != operator util::string != const char*]\n\t string1 != charArray -> " << ((string1 != charArray) ? "true" : "false") << std::endl;
-	std::cout << "[test != operator const char* != util::string]\n\t charArray != string1 -> " << ((charArray != string1) ? "true" : "false") << std::endl;
+	util::printTestCase("operator !=");
+	std::cout << "\n\tutil::string != util::string \t string1   != string2   -> " << ((string1 != string2) ? "true" : "false") << std::endl;
+	std::cout << "\tutil::string != std::string  \t string1   != stdString -> " << ((string1 != stdString) ? "true" : "false") << std::endl;
+	std::cout << "\tstd::string  != util::string \t stdString != string1   -> " << ((stdString != string1) ? "true" : "false") << std::endl;
+	std::cout << "\tutil::string != const char*  \t string1   != charArray -> " << ((string1 != charArray) ? "true" : "false") << std::endl;
+	std::cout << "\tconst char*  != util::string \t charArray != string1   -> " << ((charArray != string1) ? "true" : "false") << std::endl;
 	std::cout << "-------------------------------------------------------------------------------\n\n";
 
-	std::cout << "[test [] operator util::string[]]" << std::endl;
-	std::cout << "\tstring1: " << string1 << "-> string1[0]: " << string1[0] << std::endl;
+	util::printTestCase("operator []");
+	std::cout << "\n\tstring1: " << string1 << "-> string1[0]: " << string1[0] << std::endl;
 	std::cout << "\tstring2: " << string2 << "-> string2[3]: " << string2[3] << std::endl;
 	std::cout << "\tstring3: " << string3 << "-> string3[50]: " << string3[50] << std::endl;
 	std::cout << "-------------------------------------------------------------------------------\n\n";
 
+    // Test utility functions
+	util::printSubHeader("Test utility functions");
 	
-
-
-
-	//std::cout << " > [util::string + const char*]  string4 + charArray: " << string4 + charArray << std::endl;
-
-	//util::string string6(string4 + charArray);
-
-	//std::cout << " > [test with util::string]          string6 (size: " << string6.size() << ") : " << string6 << std::endl;
-
-	std::cout << "-------------------------------------------------------------------------------\n\n";
-
-	//std::cout << " > [util::string + const char*]: " << util::concat(string4.c_str(), charArray) << std::endl;
-
-	std::cout << "-------------------------------------------------------------------------------\n\n";
-
 	char s1[100] = "programming ", s2[] = "is awesome";
-	std::cout << "s1: " << s1 << std::endl;
-	std::cout << "s2: " << s2 << std::endl;
+	std::cout << "\ts1 (size: " << util::string::rawSize(s1) << ", capacity: 100) : content: " << s1 << std::endl;
+	std::cout << "\ts2 (size: " << util::string::rawSize(s2) << ", capacity: "<< util::string::rawSize(s2)+1 <<") : content: " << s2 << std::endl;
 
-	/*util::concat(s1, s2, 2);
-	std::cout << "s1: " << s1 << std::endl;
-
-	util::concat(s1, s2);
-	std::cout << "s1: " << s1 << std::endl;
-
-	util::deepCopy(s1, s2, 3 , 10);
-	std::cout << "s1: " << s1 << std::endl;*/
-
+	util::printTestCase("util::deepCopy()");
 	util::deepCopy(s1, s2);
-	std::cout << "s1: " << s1 << std::endl;
+	std::cout << "\n\tdeepCopy(s1, s2) -> s1 (size: " << util::string::rawSize(s1) << ", capacity: 100) : content: " << s1 << std::endl;
 
+	util::printTestCase("util::rawSize()");
+	std::cout << "\n\tutil::string::rawSize(s1) -> " << util::string::rawSize(s1) << std::endl;
 
-	/*
-	   delete[] a;
-	   delete[] b;*/
+	util::printTestCase("util::string::compare()");
+	std::cout << "\n\tutil::string::compare(s1,s2) -> " << util::string::compare(s1, s2) << std::endl;
+	std::cout << "\tutil::string::compare(s1,s1) -> " << util::string::compare(s1, s1) << std::endl;
+	std::cout << "-------------------------------------------------------------------------------\n\n";
 
-	   //MyString::String string1;
-	   //MyString::String string2("Welt");
-
-
-	   //string1.setText("Hallo ");
-	   //////string2.add("!");
-
-	   ////MyString::String pstring = string1 + string2 + " with character array added";
-
-	   //std::cout << "String1 and String2: " << string1 << string2 << std::endl;
-	   //std::cout << "String1 + String2: " << pstring << std::endl;
-	   //std::cout << "Comparing 1 with 2: " << (string1 == string2) << std::endl;
-	   //std::cout << "Comparing 1 with 1: " << (string1 == string1) << std::endl;
-	   //std::cout << "Get: " << string1[0] << std::endl;
-
-	   //MyString::It<char> it = pstring.begin();
-	   //while (it != pstring.end()) {
-	   //    std::cout << *it << std::endl;
-	   //    ++it;
-	   //}
-
+	util::printSubHeader("Test utility functions");
+	util::printTestCase("util::printHeader()");		std::cout << std::endl;
+	util::printTestCase("util::printSubHeader()");  std::cout << std::endl;
+	util::printTestCase("util::printTestCase()");   std::cout << std::endl;
+	std::cout << "\tThese functions are used to print the above colored headers :)" << std::endl;
+	std::cout << "-------------------------------------------------------------------------------\n\n";
 
 	return 0;
 }
