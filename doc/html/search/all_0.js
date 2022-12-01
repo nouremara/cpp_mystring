@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['add_0',['add',['../d7/d01/class_my_string_1_1_string.html#a86aeb19ec5cf1a580fa5c301732454a0',1,'MyString::String']]],
-  ['architecture_5fid_1',['ARCHITECTURE_ID',['../d1/d02/_c_make_c_compiler_id_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCCompilerId.c'],['../d3/d06/_c_make_c_x_x_compiler_id_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCXXCompilerId.cpp']]]
+  ['c_5fstr_0',['c_str',['../d6/d00/classutil_1_1string.html#acda64b2f3aaee822b0e5843620a423e4',1,'util::string']]],
+  ['capacity_1',['capacity',['../d6/d00/classutil_1_1string.html#a83518ec9da087c03b1e6c8c424acf136',1,'util::string']]],
+  ['clear_2',['clear',['../d6/d00/classutil_1_1string.html#a03b58579ea56e57f2cc73523a37fab3e',1,'util::string']]],
+  ['compare_3',['compare',['../d6/d00/classutil_1_1string.html#a075956e9e6e254474bd4e8f69bc0e9ea',1,'util::string']]]
 ];

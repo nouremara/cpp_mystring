@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['info_5farch_0',['info_arch',['../d1/d02/_c_make_c_compiler_id_8c.html#a59647e99d304ed33b15cb284c27ed391',1,'info_arch():&#160;CMakeCCompilerId.c'],['../d3/d06/_c_make_c_x_x_compiler_id_8cpp.html#a59647e99d304ed33b15cb284c27ed391',1,'info_arch():&#160;CMakeCXXCompilerId.cpp']]],
-  ['info_5fcompiler_1',['info_compiler',['../d1/d02/_c_make_c_compiler_id_8c.html#a4b0efeb7a5d59313986b3a0390f050f6',1,'info_compiler():&#160;CMakeCCompilerId.c'],['../d3/d06/_c_make_c_x_x_compiler_id_8cpp.html#a4b0efeb7a5d59313986b3a0390f050f6',1,'info_compiler():&#160;CMakeCXXCompilerId.cpp']]],
-  ['info_5flanguage_5fdialect_5fdefault_2',['info_language_dialect_default',['../d1/d02/_c_make_c_compiler_id_8c.html#a1ce162bad2fe6966ac8b33cc19e120b8',1,'info_language_dialect_default():&#160;CMakeCCompilerId.c'],['../d3/d06/_c_make_c_x_x_compiler_id_8cpp.html#a1ce162bad2fe6966ac8b33cc19e120b8',1,'info_language_dialect_default():&#160;CMakeCXXCompilerId.cpp']]],
-  ['info_5fplatform_3',['info_platform',['../d1/d02/_c_make_c_compiler_id_8c.html#a2321403dee54ee23f0c2fa849c60f7d4',1,'info_platform():&#160;CMakeCCompilerId.c'],['../d3/d06/_c_make_c_x_x_compiler_id_8cpp.html#a2321403dee54ee23f0c2fa849c60f7d4',1,'info_platform():&#160;CMakeCXXCompilerId.cpp']]],
-  ['initial_5fsize_4',['INITIAL_SIZE',['../d4/d05/utilstring_8h.html#a40958a1382463445e451148e3a93e049',1,'utilstring.h']]],
-  ['intialize_5fstring_5',['intialize_string',['../d6/d00/classutil_1_1string.html#af67829c6107e0ae1287b20d738bc03b5',1,'util::string']]],
-  ['it_6',['It',['../db/d00/class_my_string_1_1_it.html#ac97da44a21ef1d7ac883a5b65b9cf92d',1,'MyString::It::It()'],['../db/d00/class_my_string_1_1_it.html',1,'MyString::It&lt; T &gt;']]]
+  ['size_0',['size',['../d6/d00/classutil_1_1string.html#a1886c0a3762d683d3d747d55f061c1fd',1,'util::string']]],
+  ['string_1',['string',['../d6/d00/classutil_1_1string.html#a5e3c607d0c3d144867f6e238ce9e44c3',1,'util::string::string(size_t intialSize=INITIAL_SIZE)'],['../d6/d00/classutil_1_1string.html#acc20885275cd7e7f53016704a17609bf',1,'util::string::string(const char *)'],['../d6/d00/classutil_1_1string.html#a1a9518adf0c1525fd7fe22d87f2b072d',1,'util::string::string(const std::string &amp;)'],['../d6/d00/classutil_1_1string.html#afbd2c00b7ac16ab996c2363236212d70',1,'util::string::string(const string &amp;)'],['../d6/d00/classutil_1_1string.html',1,'util::string']]],
+  ['substr_2',['substr',['../d6/d00/classutil_1_1string.html#adc44a4bd6f589afd37123121db8597fe',1,'util::string']]]
 ];

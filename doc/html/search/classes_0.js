@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['it_0',['It',['../db/d00/class_my_string_1_1_it.html',1,'MyString']]]
+  ['string_0',['string',['../d6/d00/classutil_1_1string.html',1,'util']]]
 ];

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['length_0',['length',['../d6/d00/classutil_1_1string.html#ac5766787c64699cdd83f766b5b07dcc2',1,'util::string']]]
+  ['util_0',['util',['../d6/d02/namespaceutil.html',1,'']]],
+  ['utilstring_2ecpp_1',['utilstring.cpp',['../dd/d07/utilstring_8cpp.html',1,'']]],
+  ['utilstring_2eh_2',['utilstring.h',['../d4/d05/utilstring_8h.html',1,'']]]
 ];

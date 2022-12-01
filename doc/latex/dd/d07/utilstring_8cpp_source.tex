@@ -5,368 +5,377 @@
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00002}00002 \textcolor{comment}{// Matrikal-\/Nr.: 5200991}}
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00003}00003 \textcolor{comment}{// Assignment 1 – Own String Class}}
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00004}00004 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00018}00018 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{utilstring_8h}{utilstring.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00019}00019 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00020}\mbox{\hyperlink{namespaceutil}{00020}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceutil}{util}} \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00021}00021     \textcolor{comment}{/*=========================================================================*}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00022}00022 \textcolor{comment}{     *                         Constructors                                    *}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00023}00023 \textcolor{comment}{     *=========================================================================*/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00024}00024 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00026}\mbox{\hyperlink{classutil_1_1string_a5e3c607d0c3d144867f6e238ce9e44c3}{00026}}     \mbox{\hyperlink{classutil_1_1string_a5e3c607d0c3d144867f6e238ce9e44c3}{string::string}}(\textcolor{keywordtype}{size\_t} intialSize) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00027}00027         \mbox{\hyperlink{classutil_1_1string_af67829c6107e0ae1287b20d738bc03b5}{intialize\_string}}(intialSize);}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00028}00028     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00029}00029     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00020}00020 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{utilstring_8h}{utilstring.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00022}\mbox{\hyperlink{namespaceutil}{00022}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceutil}{util}} \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00023}00023 \textcolor{comment}{/*=========================================================================*}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00024}00024 \textcolor{comment}{ *                         Constructors                                    *}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00025}00025 \textcolor{comment}{ *=========================================================================*/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00028}\mbox{\hyperlink{classutil_1_1string_a5e3c607d0c3d144867f6e238ce9e44c3}{00028}} \mbox{\hyperlink{classutil_1_1string_a5e3c607d0c3d144867f6e238ce9e44c3}{string::string}}(\textcolor{keywordtype}{size\_t} intialSize) \{ \mbox{\hyperlink{classutil_1_1string_af67829c6107e0ae1287b20d738bc03b5}{intialize\_string}}(intialSize); \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00029}00029 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00030}00030 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00031}00031 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00033}\mbox{\hyperlink{classutil_1_1string_acc20885275cd7e7f53016704a17609bf}{00033}}     \mbox{\hyperlink{classutil_1_1string_a5e3c607d0c3d144867f6e238ce9e44c3}{string::string}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* data) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00034}00034         \mbox{\hyperlink{classutil_1_1string_af67829c6107e0ae1287b20d738bc03b5}{intialize\_string}}(\mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{rawSize}}(data));  \textcolor{comment}{// ensure string is initialized before using it}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00035}00035         \mbox{\hyperlink{classutil_1_1string_a2b35163fa77f59bb7f726aa336b1df09}{deepCopy}}(data);     \textcolor{comment}{// copy passed array to the string      }}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00036}00036     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00037}00037     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00032}\mbox{\hyperlink{classutil_1_1string_acc20885275cd7e7f53016704a17609bf}{00032}} \mbox{\hyperlink{classutil_1_1string_a5e3c607d0c3d144867f6e238ce9e44c3}{string::string}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *data) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00033}00033   \mbox{\hyperlink{classutil_1_1string_af67829c6107e0ae1287b20d738bc03b5}{intialize\_string}}(}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00034}00034       \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{rawSize}}(data)); \textcolor{comment}{// ensure string is initialized before using it}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00035}00035   \mbox{\hyperlink{classutil_1_1string_a2b35163fa77f59bb7f726aa336b1df09}{deepCopy}}(data);     \textcolor{comment}{// copy passed array to the string}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00036}00036 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00037}00037 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00038}00038 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00040}\mbox{\hyperlink{classutil_1_1string_a1a9518adf0c1525fd7fe22d87f2b072d}{00040}}     \mbox{\hyperlink{classutil_1_1string_a5e3c607d0c3d144867f6e238ce9e44c3}{string::string}}(\textcolor{keyword}{const} std::string\& data) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00041}00041         \mbox{\hyperlink{classutil_1_1string_af67829c6107e0ae1287b20d738bc03b5}{intialize\_string}}(\mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{rawSize}}(data.c\_str()));  \textcolor{comment}{// ensure string is initialized before using it}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00042}00042         \mbox{\hyperlink{classutil_1_1string_a2b35163fa77f59bb7f726aa336b1df09}{deepCopy}}(data.c\_str());     \textcolor{comment}{// copy passed array to the string      }}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00043}00043     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00044}00044     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00045}00045 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00047}\mbox{\hyperlink{classutil_1_1string_afbd2c00b7ac16ab996c2363236212d70}{00047}}     \mbox{\hyperlink{classutil_1_1string_a5e3c607d0c3d144867f6e238ce9e44c3}{string::string}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& data) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00048}00048         \mbox{\hyperlink{classutil_1_1string_af67829c6107e0ae1287b20d738bc03b5}{intialize\_string}}(\mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{rawSize}}(data.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}()));  \textcolor{comment}{// ensure string is initialized before using it}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00049}00049         \mbox{\hyperlink{classutil_1_1string_a2b35163fa77f59bb7f726aa336b1df09}{deepCopy}}(data.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}());        \textcolor{comment}{// copy passed array to the string      }}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00050}00050     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00051}00051 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00052}00052 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00053}00053     \textcolor{comment}{/*=========================================================================*}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00054}00054 \textcolor{comment}{     *                         Destructor                                      *}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00055}00055 \textcolor{comment}{     *=========================================================================*/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00056}\mbox{\hyperlink{classutil_1_1string_adfd21832f78feb76eec524a454704378}{00056}}     \mbox{\hyperlink{classutil_1_1string_adfd21832f78feb76eec524a454704378}{string::\string~string}}(\textcolor{keywordtype}{void}) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00057}00057         \textcolor{keyword}{delete}[] internal\_buffer;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00058}00058     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00059}00059 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00060}00060 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00061}00061     \textcolor{comment}{/*=========================================================================*}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00062}00062 \textcolor{comment}{     *                         Methods                                         *}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00063}00063 \textcolor{comment}{     *=========================================================================*/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00064}00064 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00065}\mbox{\hyperlink{classutil_1_1string_af67829c6107e0ae1287b20d738bc03b5}{00065}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classutil_1_1string_af67829c6107e0ae1287b20d738bc03b5}{string::intialize\_string}}(\textcolor{keywordtype}{size\_t} length) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00066}00066         internal\_buffer = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[\mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}} + 1];}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00067}00067         buffer\_size = \mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}} + 1;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00068}00068 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00069}00069         \textcolor{comment}{// initialize an empty string}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00070}00070         internal\_buffer[0] = \textcolor{charliteral}{'\(\backslash\)0'};}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00071}00071     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00072}00072     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00073}00073 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00074}\mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{00074}}     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{string::size}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00075}00075         \textcolor{keywordflow}{return} \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{rawSize}}(internal\_buffer);}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00076}00076     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00077}00077 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00078}\mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{00078}}     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{string::length}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00079}00079         \textcolor{keywordflow}{return} \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{rawSize}}(internal\_buffer);}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00080}00080     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00081}00081     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00082}00082 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00083}\mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{00083}}     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{string::rawSize}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* rawChar) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00084}00084         \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}} = 0;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00085}00085         \textcolor{keywordflow}{while} (rawChar[\mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}}] != \textcolor{charliteral}{'\(\backslash\)0'}) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00086}00086             \mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}}++;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00087}00087         \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00088}00088 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00089}00089         \textcolor{keywordflow}{return} \mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}};}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00090}00090     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00091}00091     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00092}00092 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00093}00093 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00101}\mbox{\hyperlink{classutil_1_1string_a2b35163fa77f59bb7f726aa336b1df09}{00101}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classutil_1_1string_a2b35163fa77f59bb7f726aa336b1df09}{string::deepCopy}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* rawChar, \textcolor{keywordtype}{size\_t} startPosition) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00102}00102         \textcolor{comment}{//check if internalData is of enough size to accommodate the passed array}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00103}00103         \textcolor{keywordtype}{size\_t} rawCharSize = \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{rawSize}}(rawChar);}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00104}00104         \textcolor{keywordflow}{if} (rawCharSize > \mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}()) \{ \textcolor{comment}{// more space is needed}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00105}00105             \textcolor{comment}{//delete current internalData}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00106}00106             \textcolor{keyword}{delete}[] internal\_buffer;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00107}00107 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00108}00108             \textcolor{comment}{// re-\/initialize the string with the required size}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00109}00109             \mbox{\hyperlink{classutil_1_1string_af67829c6107e0ae1287b20d738bc03b5}{intialize\_string}}(rawCharSize);}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00110}00110         \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00111}00111 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00112}00112         \textcolor{comment}{//copy the passed array to the newly allocated internalData}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00113}00113         \textcolor{keywordtype}{int} j = startPosition;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00114}00114         \textcolor{keywordflow}{while} (rawChar[j] != \textcolor{charliteral}{'\(\backslash\)0'}) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00115}00115             internal\_buffer[j] = rawChar[j];}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00116}00116             j++;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00117}00117         \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00118}00118 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00119}00119         internal\_buffer[j] = \textcolor{charliteral}{'\(\backslash\)0'};      \textcolor{comment}{// ensure destination string is null terminated}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00120}00120         \textcolor{comment}{//string\_size = rawCharSize;        // set string size to the new one }}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00121}00121     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00122}00122     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00040}\mbox{\hyperlink{classutil_1_1string_a1a9518adf0c1525fd7fe22d87f2b072d}{00040}} \mbox{\hyperlink{classutil_1_1string_a5e3c607d0c3d144867f6e238ce9e44c3}{string::string}}(\textcolor{keyword}{const} std::string \&data) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00041}00041   \mbox{\hyperlink{classutil_1_1string_af67829c6107e0ae1287b20d738bc03b5}{intialize\_string}}(}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00042}00042       \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{rawSize}}(data.c\_str())); \textcolor{comment}{// ensure string is initialized before using it}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00043}00043   \mbox{\hyperlink{classutil_1_1string_a2b35163fa77f59bb7f726aa336b1df09}{deepCopy}}(data.c\_str());     \textcolor{comment}{// copy passed array to the string}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00044}00044 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00045}00045 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00048}\mbox{\hyperlink{classutil_1_1string_afbd2c00b7ac16ab996c2363236212d70}{00048}} \mbox{\hyperlink{classutil_1_1string_a5e3c607d0c3d144867f6e238ce9e44c3}{string::string}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&data) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00049}00049   \mbox{\hyperlink{classutil_1_1string_af67829c6107e0ae1287b20d738bc03b5}{intialize\_string}}(}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00050}00050       \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{rawSize}}(data.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}())); \textcolor{comment}{// ensure string is initialized before using it}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00051}00051   \mbox{\hyperlink{classutil_1_1string_a2b35163fa77f59bb7f726aa336b1df09}{deepCopy}}(data.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}());     \textcolor{comment}{// copy passed array to the string}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00052}00052 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00054}00054 \textcolor{comment}{/*=========================================================================*}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00055}00055 \textcolor{comment}{ *                         Destructor                                      *}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00056}00056 \textcolor{comment}{ *=========================================================================*/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00057}\mbox{\hyperlink{classutil_1_1string_adfd21832f78feb76eec524a454704378}{00057}} \mbox{\hyperlink{classutil_1_1string_adfd21832f78feb76eec524a454704378}{string::\string~string}}(\textcolor{keywordtype}{void}) \{ \textcolor{keyword}{delete}[] internal\_buffer; \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00059}00059 \textcolor{comment}{/*=========================================================================*}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00060}00060 \textcolor{comment}{ *                         Methods                                         *}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00061}00061 \textcolor{comment}{ *=========================================================================*/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00063}\mbox{\hyperlink{classutil_1_1string_af67829c6107e0ae1287b20d738bc03b5}{00063}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classutil_1_1string_af67829c6107e0ae1287b20d738bc03b5}{string::intialize\_string}}(\textcolor{keywordtype}{size\_t} length) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00064}00064   internal\_buffer = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[\mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}} + 1];}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00065}00065   buffer\_size = \mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}} + 1;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00067}00067   \textcolor{comment}{// initialize an empty string}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00068}00068   internal\_buffer[0] = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00069}00069 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00070}00070 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00072}\mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{00072}} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{string::size}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{rawSize}}(internal\_buffer); \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00073}\mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{00073}} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{string::length}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{rawSize}}(internal\_buffer); \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00074}00074 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00080}\mbox{\hyperlink{classutil_1_1string_a83518ec9da087c03b1e6c8c424acf136}{00080}} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classutil_1_1string_a83518ec9da087c03b1e6c8c424acf136}{string::capacity}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00081}00081     \textcolor{keywordflow}{return} buffer\_size;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00082}00082 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00083}00083 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00090}\mbox{\hyperlink{classutil_1_1string_a03b58579ea56e57f2cc73523a37fab3e}{00090}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classutil_1_1string_a03b58579ea56e57f2cc73523a37fab3e}{string::clear}}()\{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00091}00091     \textcolor{comment}{// we only need to set the termination character to the first postion}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00092}00092     \textcolor{comment}{// to indicate that the string is empty}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00093}00093     \textcolor{comment}{// initialize an empty string}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00094}00094     internal\_buffer[0] = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00095}00095 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00097}\mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{00097}} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{string::rawSize}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *rawChar) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00098}00098   \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}} = 0;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00099}00099   \textcolor{keywordflow}{while} (rawChar[\mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}}] != \textcolor{charliteral}{'\(\backslash\)0'}) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00100}00100     \mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}}++;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00101}00101   \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00103}00103   \textcolor{keywordflow}{return} \mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}};}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00104}00104 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00105}00105 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00114}\mbox{\hyperlink{classutil_1_1string_a2b35163fa77f59bb7f726aa336b1df09}{00114}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classutil_1_1string_a2b35163fa77f59bb7f726aa336b1df09}{string::deepCopy}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *rawChar, \textcolor{keywordtype}{size\_t} startPosition) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00115}00115   \textcolor{comment}{// check if internalData is of enough size to accommodate the passed array}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00116}00116   \textcolor{keywordtype}{size\_t} rawCharSize = \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{rawSize}}(rawChar);}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00117}00117   \textcolor{keywordflow}{if} (rawCharSize > \mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}()) \{ \textcolor{comment}{// more space is needed}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00118}00118     \textcolor{comment}{// delete current internalData}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00119}00119     \textcolor{keyword}{delete}[] internal\_buffer;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00120}00120 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00121}00121     \textcolor{comment}{// re-\/initialize the string with the required size}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00122}00122     \mbox{\hyperlink{classutil_1_1string_af67829c6107e0ae1287b20d738bc03b5}{intialize\_string}}(rawCharSize);}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00123}00123   \}}
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00124}00124 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00125}\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{00125}}     \textcolor{keywordtype}{char}* \mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{string::c\_str}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00126}00126         \textcolor{keywordflow}{return} internal\_buffer;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00127}00127     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00128}00128     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00129}00129 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00130}00130 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00131}00131     \textcolor{comment}{// Returns a pointer to an array that contains a null-\/terminated}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00132}00132         \textcolor{comment}{// sequence of characters(i.e., a C-\/string) representing the current }}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00133}00133         \textcolor{comment}{// value of the string object.}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00134}00134         \textcolor{comment}{// Returns a substring object of type util::string which }}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00135}00135         \textcolor{comment}{// starts at pos. Parameter length specifies the amount of }}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00136}00136         \textcolor{comment}{// characters of the new util::string to be returned.}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00137}\mbox{\hyperlink{classutil_1_1string_adc44a4bd6f589afd37123121db8597fe}{00137}}     \textcolor{keywordtype}{string} \mbox{\hyperlink{classutil_1_1string_adc44a4bd6f589afd37123121db8597fe}{string::substr}}(\textcolor{keywordtype}{size\_t} pos, \textcolor{keywordtype}{size\_t} length) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00138}00138         \textcolor{keywordtype}{string} substring(\mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}});}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00125}00125   \textcolor{comment}{// copy the passed array to the newly allocated internalData}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00126}00126   \textcolor{keywordtype}{int} j = startPosition;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00127}00127   \textcolor{keywordflow}{while} (rawChar[j] != \textcolor{charliteral}{'\(\backslash\)0'}) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00128}00128     internal\_buffer[j] = rawChar[j];}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00129}00129     j++;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00130}00130   \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00131}00131 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00132}00132   internal\_buffer[j] = \textcolor{charliteral}{'\(\backslash\)0'}; \textcolor{comment}{// ensure destination string is null terminated}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00133}00133   \textcolor{comment}{// string\_size = rawCharSize;     // set string size to the new one}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00134}00134 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00135}00135 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00136}00136 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00137}\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{00137}} \textcolor{keywordtype}{char} *\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{string::c\_str}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} internal\_buffer; \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00138}00138 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00139}00139 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00140}00140         \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{util::deepCopy}}(substring.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}(), internal\_buffer+ pos, 0, \mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}});}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00141}00141 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00142}00142 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00143}00143         \textcolor{keywordflow}{return} substring;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00144}00144     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00145}00145 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00146}00146     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00147}00147 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00160}\mbox{\hyperlink{classutil_1_1string_a075956e9e6e254474bd4e8f69bc0e9ea}{00160}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{classutil_1_1string_a0f34d78f4aebd5a04dad7cf4dc58a6f5}{string::compare}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* lhsCharArray, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* rhsCharArray)}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00161}00161     \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00162}00162         \textcolor{comment}{// convert both pointers from `char*` to `unsigned char*`}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00163}00163         \textcolor{comment}{// needed for the difference calculations}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00164}00164         \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* p1 = (\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}*)lhsCharArray;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00165}00165         \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* p2 = (\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}*)rhsCharArray;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00166}00166 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00167}00167         \textcolor{comment}{// check if characters differ, or end of the first string (a terminating null) is reached}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00168}00168         \textcolor{keywordflow}{while} (*p1 \&\& *p1 == *p2) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00169}00169             \textcolor{comment}{// proceed to the next pair of characters}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00170}00170             ++p1, ++p2;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00171}00171         \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00172}00172 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00173}00173         \textcolor{comment}{// return the ASCII difference}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00174}00174         \textcolor{keywordflow}{return} (*p1 > *p2) -\/ (*p2 > *p1);}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00175}00175     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00176}00176 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00177}00177 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00178}00178     \textcolor{comment}{/*=========================================================================*}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00179}00179 \textcolor{comment}{     *                         Operators                                       *}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00180}00180 \textcolor{comment}{     *=========================================================================*/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00140}00140 \textcolor{comment}{// Returns a pointer to an array that contains a null-\/terminated}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00141}00141 \textcolor{comment}{// sequence of characters(i.e., a C-\/string) representing the current}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00142}00142 \textcolor{comment}{// value of the string object.}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00143}00143 \textcolor{comment}{// Returns a substring object of type util::string which}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00144}00144 \textcolor{comment}{// starts at pos. Parameter length specifies the amount of}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00145}00145 \textcolor{comment}{// characters of the new util::string to be returned.}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00146}\mbox{\hyperlink{classutil_1_1string_adc44a4bd6f589afd37123121db8597fe}{00146}} \textcolor{keywordtype}{string} \mbox{\hyperlink{classutil_1_1string_adc44a4bd6f589afd37123121db8597fe}{string::substr}}(\textcolor{keywordtype}{size\_t} pos, \textcolor{keywordtype}{size\_t} length) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00147}00147   \textcolor{keywordtype}{string} substring(\mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}});}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00148}00148 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00149}00149   \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{util::deepCopy}}(substring.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}(), internal\_buffer + pos, 0, \mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}});}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00151}00151   \textcolor{keywordflow}{return} substring;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00152}00152 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00153}00153 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00154}00154 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00155}00155 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00169}\mbox{\hyperlink{classutil_1_1string_a075956e9e6e254474bd4e8f69bc0e9ea}{00169}} \textcolor{keywordtype}{int} \mbox{\hyperlink{classutil_1_1string_a075956e9e6e254474bd4e8f69bc0e9ea}{string::compare}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *lhsCharArray, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *rhsCharArray) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00170}00170   \textcolor{comment}{// convert both pointers from `char*` to `unsigned char*`}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00171}00171   \textcolor{comment}{// needed for the difference calculations}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00172}00172   \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *p1 = (\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)lhsCharArray;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00173}00173   \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *p2 = (\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)rhsCharArray;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00174}00174 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00175}00175   \textcolor{comment}{// check if characters differ, or end of the first string (a terminating null)}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00176}00176   \textcolor{comment}{// is reached}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00177}00177   \textcolor{keywordflow}{while} (*p1 \&\& *p1 == *p2) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00178}00178     \textcolor{comment}{// proceed to the next pair of characters}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00179}00179     ++p1, ++p2;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00180}00180   \}}
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00181}00181 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00182}00182 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00183}00183 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00184}00184      \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00182}00182   \textcolor{comment}{// return the ASCII difference}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00183}00183   \textcolor{keywordflow}{return} (*p1 > *p2) -\/ (*p2 > *p1);}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00184}00184 \}}
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00185}00185 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00186}\mbox{\hyperlink{classutil_1_1string_aadfe94866d85a083a57bd6f20c3367ab}{00186}}     \textcolor{keywordtype}{string}\& \mbox{\hyperlink{classutil_1_1string_aadfe94866d85a083a57bd6f20c3367ab}{string::operator=}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& rhsString) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00187}00187         \mbox{\hyperlink{classutil_1_1string_a2b35163fa77f59bb7f726aa336b1df09}{deepCopy}}(rhsString.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}());}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00188}00188         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00189}00189     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00190}00190 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00191}\mbox{\hyperlink{classutil_1_1string_a9bf4bac337e92b6f7d2c899961b7ae02}{00191}}     \textcolor{keywordtype}{string}\& \mbox{\hyperlink{classutil_1_1string_aadfe94866d85a083a57bd6f20c3367ab}{string::operator=}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* rhsCharArray) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00192}00192         \mbox{\hyperlink{classutil_1_1string_a2b35163fa77f59bb7f726aa336b1df09}{deepCopy}}(rhsCharArray);}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00193}00193         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00194}00194     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00195}00195 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00196}\mbox{\hyperlink{classutil_1_1string_a0cb70d52c64ade9dfd1e51a05553f312}{00196}}     \textcolor{keywordtype}{string}\& \mbox{\hyperlink{classutil_1_1string_aadfe94866d85a083a57bd6f20c3367ab}{string::operator=}}(\textcolor{keyword}{const} std::string\& rhsString) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00197}00197         \mbox{\hyperlink{classutil_1_1string_a2b35163fa77f59bb7f726aa336b1df09}{deepCopy}}(rhsString.c\_str());}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00198}00198         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00199}00199     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00200}00200     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00201}00201 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00202}00202 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00203}\mbox{\hyperlink{classutil_1_1string_a47ecf38cdbd749c1a320727413bb6071}{00203}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classutil_1_1string_a9e654bc70de99ff0711e7d06afe44244}{string::operator==}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& rhsString) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00204}00204         \textcolor{comment}{//if (string\_size != rhsString.size()) return false;}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00205}00205         \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00206}00206         \textcolor{keywordflow}{return}  !\mbox{\hyperlink{classutil_1_1string_a0f34d78f4aebd5a04dad7cf4dc58a6f5}{compare}}(internal\_buffer, rhsString.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}());}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00207}00207     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00208}00208 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00209}\mbox{\hyperlink{classutil_1_1string_a838347628be8990b09535e2c11f76480}{00209}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classutil_1_1string_a9e654bc70de99ff0711e7d06afe44244}{string::operator==}}(\textcolor{keyword}{const} std::string\& rhsString) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00210}00210         \textcolor{comment}{//if (string\_size != rhsString.size()) return false;}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00186}00186 \textcolor{comment}{/*=========================================================================*}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00187}00187 \textcolor{comment}{ *                         Operators                                       *}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00188}00188 \textcolor{comment}{ *=========================================================================*/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00189}00189 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00190}\mbox{\hyperlink{classutil_1_1string_aadfe94866d85a083a57bd6f20c3367ab}{00190}} \textcolor{keywordtype}{string} \&\mbox{\hyperlink{classutil_1_1string_aadfe94866d85a083a57bd6f20c3367ab}{string::operator=}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&rhsString) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00191}00191   \mbox{\hyperlink{classutil_1_1string_a2b35163fa77f59bb7f726aa336b1df09}{deepCopy}}(rhsString.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}());}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00192}00192   \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00193}00193 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00194}00194 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00195}\mbox{\hyperlink{classutil_1_1string_a9bf4bac337e92b6f7d2c899961b7ae02}{00195}} \textcolor{keywordtype}{string} \&\mbox{\hyperlink{classutil_1_1string_aadfe94866d85a083a57bd6f20c3367ab}{string::operator=}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *rhsCharArray) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00196}00196   \mbox{\hyperlink{classutil_1_1string_a2b35163fa77f59bb7f726aa336b1df09}{deepCopy}}(rhsCharArray);}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00197}00197   \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00198}00198 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00199}00199 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00200}\mbox{\hyperlink{classutil_1_1string_a0cb70d52c64ade9dfd1e51a05553f312}{00200}} \textcolor{keywordtype}{string} \&\mbox{\hyperlink{classutil_1_1string_aadfe94866d85a083a57bd6f20c3367ab}{string::operator=}}(\textcolor{keyword}{const} std::string \&rhsString) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00201}00201   \mbox{\hyperlink{classutil_1_1string_a2b35163fa77f59bb7f726aa336b1df09}{deepCopy}}(rhsString.c\_str());}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00202}00202   \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00203}00203 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00204}00204 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00205}00205 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00206}\mbox{\hyperlink{classutil_1_1string_a47ecf38cdbd749c1a320727413bb6071}{00206}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classutil_1_1string_a9e654bc70de99ff0711e7d06afe44244}{string::operator==}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&rhsString) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00207}00207   \textcolor{comment}{// if (string\_size != rhsString.size()) return false;}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00208}00208   \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00209}00209   \textcolor{keywordflow}{return} !\mbox{\hyperlink{classutil_1_1string_a075956e9e6e254474bd4e8f69bc0e9ea}{compare}}(internal\_buffer, rhsString.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}());}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00210}00210 \}}
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00211}00211 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00212}00212         \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00213}00213         \textcolor{keywordflow}{return}  !\mbox{\hyperlink{classutil_1_1string_a0f34d78f4aebd5a04dad7cf4dc58a6f5}{compare}}(internal\_buffer, rhsString.c\_str());}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00214}00214     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00215}00215 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00216}\mbox{\hyperlink{classutil_1_1string_ab9e9cd60802d763d685fa14b933aac26}{00216}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classutil_1_1string_a9e654bc70de99ff0711e7d06afe44244}{string::operator==}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* charArray) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00217}00217         \textcolor{comment}{//if (string\_size != rhsString.size()) return false;}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00212}\mbox{\hyperlink{classutil_1_1string_a838347628be8990b09535e2c11f76480}{00212}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classutil_1_1string_a9e654bc70de99ff0711e7d06afe44244}{string::operator==}}(\textcolor{keyword}{const} std::string \&rhsString) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00213}00213   \textcolor{comment}{// if (string\_size != rhsString.size()) return false;}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00214}00214 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00215}00215   \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00216}00216   \textcolor{keywordflow}{return} !\mbox{\hyperlink{classutil_1_1string_a075956e9e6e254474bd4e8f69bc0e9ea}{compare}}(internal\_buffer, rhsString.c\_str());}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00217}00217 \}}
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00218}00218 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00219}00219         \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00220}00220         \textcolor{keywordflow}{return}  !\mbox{\hyperlink{classutil_1_1string_a0f34d78f4aebd5a04dad7cf4dc58a6f5}{compare}}(internal\_buffer, charArray);}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00221}00221     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00222}00222     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00223}00223 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00224}\mbox{\hyperlink{classutil_1_1string_a0210feef657db2717f93a06dfa6c4618}{00224}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classutil_1_1string_a6b3bf55e50a4ac41a58c8a501135c4f4}{string::operator!=}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& rhsString) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00225}00225         \textcolor{comment}{//if (string\_size != rhsString.size()) return false;}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00226}00226         \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00227}00227         \textcolor{keywordflow}{return}  \mbox{\hyperlink{classutil_1_1string_a0f34d78f4aebd5a04dad7cf4dc58a6f5}{compare}}(internal\_buffer, rhsString.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}());}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00228}00228     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00229}00229 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00230}\mbox{\hyperlink{classutil_1_1string_aaaad9443e1e9da0d33b5589952743133}{00230}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classutil_1_1string_a6b3bf55e50a4ac41a58c8a501135c4f4}{string::operator!=}}(\textcolor{keyword}{const} std::string\& rhsString) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00231}00231         \textcolor{comment}{//if (string\_size != rhsString.size()) return false;}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00219}\mbox{\hyperlink{classutil_1_1string_ab9e9cd60802d763d685fa14b933aac26}{00219}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classutil_1_1string_a9e654bc70de99ff0711e7d06afe44244}{string::operator==}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *charArray) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00220}00220   \textcolor{comment}{// if (string\_size != rhsString.size()) return false;}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00221}00221 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00222}00222   \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00223}00223   \textcolor{keywordflow}{return} !\mbox{\hyperlink{classutil_1_1string_a075956e9e6e254474bd4e8f69bc0e9ea}{compare}}(internal\_buffer, charArray);}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00224}00224 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00225}00225 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00226}00226 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00227}\mbox{\hyperlink{classutil_1_1string_a0210feef657db2717f93a06dfa6c4618}{00227}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classutil_1_1string_a6b3bf55e50a4ac41a58c8a501135c4f4}{string::operator!=}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&rhsString) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00228}00228   \textcolor{comment}{// if (string\_size != rhsString.size()) return false;}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00229}00229   \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00230}00230   \textcolor{keywordflow}{return} \mbox{\hyperlink{classutil_1_1string_a075956e9e6e254474bd4e8f69bc0e9ea}{compare}}(internal\_buffer, rhsString.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}());}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00231}00231 \}}
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00232}00232 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00233}00233         \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00234}00234         \textcolor{keywordflow}{return}  \mbox{\hyperlink{classutil_1_1string_a0f34d78f4aebd5a04dad7cf4dc58a6f5}{compare}}(internal\_buffer, rhsString.c\_str());}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00235}00235     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00236}00236 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00237}\mbox{\hyperlink{classutil_1_1string_a9ff055142c9f31218388793246198856}{00237}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classutil_1_1string_a6b3bf55e50a4ac41a58c8a501135c4f4}{string::operator!=}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* charArray) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00238}00238         \textcolor{comment}{//if (string\_size != rhsString.size()) return false;}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00233}\mbox{\hyperlink{classutil_1_1string_aaaad9443e1e9da0d33b5589952743133}{00233}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classutil_1_1string_a6b3bf55e50a4ac41a58c8a501135c4f4}{string::operator!=}}(\textcolor{keyword}{const} std::string \&rhsString) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00234}00234   \textcolor{comment}{// if (string\_size != rhsString.size()) return false;}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00235}00235 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00236}00236   \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00237}00237   \textcolor{keywordflow}{return} \mbox{\hyperlink{classutil_1_1string_a075956e9e6e254474bd4e8f69bc0e9ea}{compare}}(internal\_buffer, rhsString.c\_str());}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00238}00238 \}}
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00239}00239 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00240}00240         \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00241}00241         \textcolor{keywordflow}{return}  \mbox{\hyperlink{classutil_1_1string_a0f34d78f4aebd5a04dad7cf4dc58a6f5}{compare}}(internal\_buffer, charArray);}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00242}00242     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00243}00243     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00244}00244 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00245}\mbox{\hyperlink{classutil_1_1string_aa427b61b6003128a0d25c31064f5cd28}{00245}}     \textcolor{keyword}{const} \textcolor{keywordtype}{char} \mbox{\hyperlink{classutil_1_1string_aa427b61b6003128a0d25c31064f5cd28}{string::operator[]}}(\textcolor{keywordtype}{size\_t} position) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00246}00246         \textcolor{keywordflow}{if} (position > \mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}()) \textcolor{keywordflow}{return} \textcolor{charliteral}{'\(\backslash\)0'};}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00247}00247         \textcolor{keywordflow}{return} internal\_buffer[position];}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00248}00248     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00249}00249     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00250}00250 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00251}00251 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00252}\mbox{\hyperlink{classutil_1_1string_af5866911339a1dbb8d3188bbe831a3a4}{00252}}     \textcolor{keywordtype}{string}\& \mbox{\hyperlink{classutil_1_1string_af5866911339a1dbb8d3188bbe831a3a4}{string::operator+}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& rhsString) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00253}00253         \textcolor{keywordtype}{size\_t} total\_size = \mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}() + rhsString.\mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}() + 1;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00254}00254         \textcolor{keywordtype}{char}* temp = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[total\_size];}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00255}00255 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00256}00256         \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{util::deepCopy}}(temp, internal\_buffer,0);}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00257}00257         \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{util::deepCopy}}(temp, rhsString.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}(), \mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}());}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00240}\mbox{\hyperlink{classutil_1_1string_a9ff055142c9f31218388793246198856}{00240}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classutil_1_1string_a6b3bf55e50a4ac41a58c8a501135c4f4}{string::operator!=}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *charArray) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00241}00241   \textcolor{comment}{// if (string\_size != rhsString.size()) return false;}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00242}00242 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00243}00243   \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00244}00244   \textcolor{keywordflow}{return} \mbox{\hyperlink{classutil_1_1string_a075956e9e6e254474bd4e8f69bc0e9ea}{compare}}(internal\_buffer, charArray);}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00245}00245 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00246}00246 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00247}00247 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00248}\mbox{\hyperlink{classutil_1_1string_aa427b61b6003128a0d25c31064f5cd28}{00248}} \textcolor{keyword}{const} \textcolor{keywordtype}{char} \mbox{\hyperlink{classutil_1_1string_aa427b61b6003128a0d25c31064f5cd28}{string::operator[]}}(\textcolor{keywordtype}{size\_t} position) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00249}00249   \textcolor{keywordflow}{if} (position > \mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}())}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00250}00250     \textcolor{keywordflow}{return} \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00251}00251   \textcolor{keywordflow}{return} internal\_buffer[position];}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00252}00252 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00253}00253 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00254}00254 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00255}\mbox{\hyperlink{classutil_1_1string_a9aeb1cfd19ff76aa937d9b2dffaa4356}{00255}} \textcolor{keywordtype}{string} \&\mbox{\hyperlink{classutil_1_1string_a9aeb1cfd19ff76aa937d9b2dffaa4356}{string::operator+=}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&rhsString) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00256}00256   \textcolor{keywordtype}{size\_t} total\_size = \mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}() + rhsString.\mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}() + 1;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00257}00257   \textcolor{keywordtype}{char} *temp = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[total\_size];}
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00258}00258 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00259}00259         \textcolor{keyword}{delete}[] internal\_buffer;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00260}00260 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00261}00261         internal\_buffer = temp;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00262}00262         buffer\_size = total\_size;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00263}00263         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)nbuffer\_size "{}} << buffer\_size << std::endl;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00264}00264         std::cout << \textcolor{stringliteral}{"{}(size: "{}} << \mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}() << \textcolor{stringliteral}{"{}) : "{}} << internal\_buffer << std::endl;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00265}00265 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00266}00266         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00267}00267     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00268}00268     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00269}00269 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00270}00270 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00275}\mbox{\hyperlink{classutil_1_1string_af37d287f0b5197b86dc71a746f7a2964}{00275}}     \textcolor{keywordtype}{string}\& \mbox{\hyperlink{classutil_1_1string_af5866911339a1dbb8d3188bbe831a3a4}{string::operator+}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* rhsString) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00259}00259   \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{util::deepCopy}}(temp, internal\_buffer, 0);}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00260}00260   \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{util::deepCopy}}(temp, rhsString.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}(), \mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}());}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00261}00261 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00262}00262   \textcolor{keyword}{delete}[] internal\_buffer;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00263}00263 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00264}00264   internal\_buffer = temp;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00265}00265   buffer\_size = total\_size;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00266}00266   \textcolor{comment}{//std::cout << "{}\(\backslash\)n\(\backslash\)nbuffer\_size "{} << buffer\_size << std::endl;}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00267}00267   \textcolor{comment}{//std::cout << "{}(size: "{} << size() << "{}) : "{} << internal\_buffer << std::endl;}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00268}00268 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00269}00269   \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00270}00270 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00271}00271 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00272}00272 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00273}\mbox{\hyperlink{classutil_1_1string_af667ec9e20da9e086ecfd81a9c54e297}{00273}} \textcolor{keywordtype}{string}\& \mbox{\hyperlink{classutil_1_1string_a9aeb1cfd19ff76aa937d9b2dffaa4356}{string::operator+=}}(\textcolor{keyword}{const} std::string\& rhsString) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00274}00274     \textcolor{keywordtype}{size\_t} total\_size = \mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}() + rhsString.size() + 1;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00275}00275     \textcolor{keywordtype}{char}* temp = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[total\_size];}
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00276}00276 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00277}00277 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00278}00278         \textcolor{comment}{// a temporary object to fill it with the concatenated strings}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00279}00279         \textcolor{comment}{// total size of the two strings combined}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00280}00280         \textcolor{keywordtype}{size\_t} rhsSize = \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{rawSize}}(rhsString);}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00281}00281         \textcolor{keywordtype}{char}* tempData = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[\mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}() + rhsSize + 1];}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00282}00282 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00283}00283         \textcolor{comment}{// copy the passed array to the newly allocated tempData}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00284}00284         \textcolor{comment}{// copy the lhs string from the beginning of the string then the rhs string there after}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00285}00285         \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00286}00286         \textcolor{comment}{// |0| ... |lhs size| ...  |lhs size|rhs size + lhs size + 1| }}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00287}00287         \textcolor{comment}{// |   lhs string   |   rhs string  | \(\backslash\)0 |}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00288}00288         \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00289}00289         \textcolor{comment}{// note that at the given position the lhs \(\backslash\)0 termination will be overwritten as this copy starts at its position}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00290}00290 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00291}00291         \textcolor{keywordtype}{int} j = 0;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00292}00292         \textcolor{keywordflow}{while} (internal\_buffer[j] != \textcolor{charliteral}{'\(\backslash\)0'}) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00293}00293             tempData[j] = internal\_buffer[j];}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00294}00294             j++;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00295}00295         \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00296}00296 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00297}00297         \textcolor{keywordtype}{int} i = 0;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00298}00298         \textcolor{keywordflow}{while} (rhsString[i] != \textcolor{charliteral}{'\(\backslash\)0'}) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00299}00299             tempData[j] = rhsString[i];}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00300}00300             j++;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00301}00301             i++;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00302}00302         \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00303}00303         tempData[j] = \textcolor{charliteral}{'\(\backslash\)0'}; \textcolor{comment}{// ensure destination string is null terminated}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00304}00304 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00305}00305         std::cout << \textcolor{stringliteral}{"{} > [tempData] : "{}} << tempData << std::endl;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00306}00306 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00307}00307         \mbox{\hyperlink{classutil_1_1string}{util::string}} temp;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00308}00308         \textcolor{comment}{//delete[] tempData;}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00309}00309 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00310}00310         \textcolor{keywordflow}{return} temp;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00311}00311     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00312}00312 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00277}00277     \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{util::deepCopy}}(temp, internal\_buffer, 0);}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00278}00278     \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{util::deepCopy}}(temp, rhsString.c\_str(), \mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}());}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00279}00279 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00280}00280     \textcolor{keyword}{delete}[] internal\_buffer;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00281}00281 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00282}00282     internal\_buffer = temp;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00283}00283     buffer\_size = total\_size;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00284}00284    }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00285}00285     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00286}00286 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00287}00287 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00288}00288 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00292}\mbox{\hyperlink{classutil_1_1string_a831f361edac660ef1c87bcc6f2bc374a}{00292}} \textcolor{keywordtype}{string} \&\mbox{\hyperlink{classutil_1_1string_a9aeb1cfd19ff76aa937d9b2dffaa4356}{string::operator+=}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *rhsString) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00293}00293     \textcolor{keywordtype}{size\_t} total\_size = \mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}() + \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{rawSize}}(rhsString) + 1;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00294}00294     \textcolor{keywordtype}{char}* temp = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[total\_size];}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00295}00295 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00296}00296     \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{util::deepCopy}}(temp, internal\_buffer, 0);}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00297}00297     \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{util::deepCopy}}(temp, rhsString, \mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}());}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00298}00298 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00299}00299     \textcolor{keyword}{delete}[] internal\_buffer;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00300}00300 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00301}00301     internal\_buffer = temp;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00302}00302     buffer\_size = total\_size;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00303}00303 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00304}00304     \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00305}00305 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00306}00306 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00307}00307 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00308}\mbox{\hyperlink{classutil_1_1string_aa7f004d6a0b389dcbb480d822991fb50}{00308}} \textcolor{keywordtype}{string} \mbox{\hyperlink{classutil_1_1string_aa7f004d6a0b389dcbb480d822991fb50}{string::operator+}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& rhsString) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00309}00309     \textcolor{keywordtype}{string} temp(\mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}() + rhsString.\mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}());}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00310}00310 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00311}00311     \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{util::deepCopy}}(temp.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}(), internal\_buffer, 0);}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00312}00312     \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{util::deepCopy}}(temp.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}(), rhsString.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}(), \mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}());}
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00313}00313 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00314}00314 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00315}00315     \textcolor{comment}{/*====================================================================================*}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00316}00316 \textcolor{comment}{     * non-\/member functions and operator methods for the cases util::string is on the rhs *}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00317}00317 \textcolor{comment}{     *====================================================================================*/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00318}00318 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00319}\mbox{\hyperlink{classutil_1_1string_ad047d87e4c7430084515ad9c12e6a4dd}{00319}}     std::ostream\& \mbox{\hyperlink{namespaceutil_a0ba3aab2318d3c284debce908db73718}{operator<<}}(std::ostream\& iostream, \textcolor{keyword}{const} \mbox{\hyperlink{classutil_1_1string}{util::string}}\& myString) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00320}00320         \textcolor{keywordflow}{return} (iostream << myString.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}());}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00321}00321     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00322}00322 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00323}00323     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00324}00324 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00325}00325 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00326}\mbox{\hyperlink{classutil_1_1string_a9e654bc70de99ff0711e7d06afe44244}{00326}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespaceutil_a3cee572eca0c7cee1b82eb9ecd9c3faa}{operator==}}(\textcolor{keyword}{const} std::string\& lhsString, \textcolor{keyword}{const} \mbox{\hyperlink{classutil_1_1string}{util::string}}\& rhsString) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00327}00327         \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00328}00328         \textcolor{keywordflow}{return}  !\mbox{\hyperlink{classutil_1_1string_a0f34d78f4aebd5a04dad7cf4dc58a6f5}{util::string::compare}}(lhsString.c\_str(), rhsString.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}());}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00329}00329     \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00314}00314     \textcolor{keywordflow}{return} temp;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00315}00315 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00316}00316 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00317}00317 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00318}\mbox{\hyperlink{classutil_1_1string_a576be22224f3ceef1f6c13eb761bea74}{00318}} \textcolor{keywordtype}{string} \mbox{\hyperlink{classutil_1_1string_aa7f004d6a0b389dcbb480d822991fb50}{string::operator+}}(\textcolor{keyword}{const} std::string\& rhsString) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00319}00319     \textcolor{keywordtype}{string} temp(\mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}() + rhsString.size());}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00320}00320 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00321}00321     \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{util::deepCopy}}(temp.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}(), internal\_buffer, 0);}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00322}00322     \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{util::deepCopy}}(temp.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}(), rhsString.c\_str(), \mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}());}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00323}00323 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00324}00324     \textcolor{keywordflow}{return} temp;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00325}00325 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00326}00326 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00327}00327 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00328}\mbox{\hyperlink{classutil_1_1string_acc16abe6236845fbb044be11b05e4a1f}{00328}} \textcolor{keywordtype}{string} \mbox{\hyperlink{classutil_1_1string_aa7f004d6a0b389dcbb480d822991fb50}{string::operator+}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* rhsString) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00329}00329     \textcolor{keywordtype}{string} temp(\mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}() + \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{rawSize}}(rhsString));}
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00330}00330 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00331}\mbox{\hyperlink{classutil_1_1string_adf96580014b8bc3b2eddd7eb7eef9867}{00331}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespaceutil_a3cee572eca0c7cee1b82eb9ecd9c3faa}{operator==}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* lhsCharArray, \textcolor{keyword}{const} \mbox{\hyperlink{classutil_1_1string}{util::string}}\& rhsString) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00332}00332         \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00333}00333         \textcolor{keywordflow}{return}  !\mbox{\hyperlink{classutil_1_1string_a0f34d78f4aebd5a04dad7cf4dc58a6f5}{util::string::compare}}(lhsCharArray, rhsString.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}());}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00334}00334     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00335}00335     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00331}00331     \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{util::deepCopy}}(temp.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}(), internal\_buffer, 0);}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00332}00332     \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{util::deepCopy}}(temp.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}(), rhsString, \mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}());}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00333}00333 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00334}00334     \textcolor{keywordflow}{return} temp;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00335}00335 \}}
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00336}00336 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00337}\mbox{\hyperlink{classutil_1_1string_a6b3bf55e50a4ac41a58c8a501135c4f4}{00337}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespaceutil_ab1488ae992e5703bb0fc4d3ff416324e}{operator!=}}(\textcolor{keyword}{const} std::string\& lhsString, \textcolor{keyword}{const} \mbox{\hyperlink{classutil_1_1string}{util::string}}\& rhsString) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00338}00338         \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00339}00339         \textcolor{keywordflow}{return}  \mbox{\hyperlink{classutil_1_1string_a0f34d78f4aebd5a04dad7cf4dc58a6f5}{util::string::compare}}(lhsString.c\_str(), rhsString.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}());}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00340}00340     \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00337}00337 \textcolor{comment}{/*====================================================================================*}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00338}00338 \textcolor{comment}{ * non-\/member (friend) functions and operator methods for the cases                   *}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00339}00339 \textcolor{comment}{ * util::string is on the RHS                                                         *}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00340}00340 \textcolor{comment}{ *====================================================================================*/}}
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00341}00341 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00342}\mbox{\hyperlink{classutil_1_1string_ab8449d924f6155c046266b4a2d9698e6}{00342}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespaceutil_ab1488ae992e5703bb0fc4d3ff416324e}{operator!=}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* lhsCharArray, \textcolor{keyword}{const} \mbox{\hyperlink{classutil_1_1string}{util::string}}\& rhsString) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00343}00343         \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00344}00344         \textcolor{keywordflow}{return}  \mbox{\hyperlink{classutil_1_1string_a0f34d78f4aebd5a04dad7cf4dc58a6f5}{util::string::compare}}(lhsCharArray, rhsString.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}());}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00345}00345     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00346}00346     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00347}00347 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00348}00348 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00357}\mbox{\hyperlink{namespaceutil_a7be55f4ae2f980e374fa1b9f33b5085a}{00357}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespaceutil_a7be55f4ae2f980e374fa1b9f33b5085a}{concat}}(\textcolor{keywordtype}{char}* rawCharTarget, \textcolor{keywordtype}{char}* rawCharSource, \textcolor{keywordtype}{size\_t} startPosition) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00358}00358         \textcolor{comment}{// if the startPosition is not given (we have its default -\/1)}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00359}00359         \textcolor{comment}{// do a normal concatenation of the two strings)}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00360}00360         \textcolor{comment}{// note that at the given position the lhs \(\backslash\)0 termination will be }}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00361}00361         \textcolor{comment}{// overwritten as this copy starts at its position}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00362}00362         \textcolor{keywordflow}{if} (startPosition == -\/1) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00363}00363             startPosition = \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{util::string::rawSize}}(rawCharTarget);}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00364}00364         \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00365}00365 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00366}00366         \textcolor{comment}{// deep copy rawCharSource into rawCharTarget beginning at startPosition        }}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00367}00367         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} j = 0; rawCharSource[j] != \textcolor{charliteral}{'\(\backslash\)0'}; ++j, ++startPosition) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00368}00368             rawCharTarget[startPosition] = rawCharSource[j];}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00369}00369         \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00370}00370 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00371}00371         \textcolor{comment}{// ensure destination string is null terminated}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00372}00372         rawCharTarget[startPosition] = \textcolor{charliteral}{'\(\backslash\)0'};}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00373}00373     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00374}00374 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00375}00375 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00376}00376     \textcolor{comment}{// destStartPosition  default is to first location of the destRawChar}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00377}00377     \textcolor{comment}{// srcEndPosition     default is to last character (before the \(\backslash\)0) of the srcRawChar}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00378}\mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{00378}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{deepCopy}}(\textcolor{keywordtype}{char}* rawCharTarget, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* rawCharSource, \textcolor{keywordtype}{size\_t} destStartPosition, \textcolor{keywordtype}{size\_t} srcEndPosition)\{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00379}00379         \textcolor{comment}{// check and adjust for default values}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00380}00380         destStartPosition = (destStartPosition == -\/1) ? \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{util::string::rawSize}}(rawCharTarget) : destStartPosition;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00381}00381         srcEndPosition = (srcEndPosition == -\/1) ? \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{util::string::rawSize}}(rawCharSource): srcEndPosition;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00382}00382         }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00383}00383         \textcolor{comment}{// deep copy rawCharSource into rawCharTarget beginning at startPosition        }}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00384}00384 \textcolor{comment}{//      for (size\_t j = 0; rawCharSource[j] != '\(\backslash\)0'; ++j, ++destStartPosition) \{}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00385}00385         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} j = 0; j < srcEndPosition; ++j, ++destStartPosition) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00386}00386             rawCharTarget[destStartPosition] = rawCharSource[j];}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00387}00387         \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00388}00388 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00389}00389         \textcolor{comment}{// ensure destination string is null terminated}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00390}00390         rawCharTarget[destStartPosition] = \textcolor{charliteral}{'\(\backslash\)0'};}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00391}00391 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00392}00392     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00393}00393     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00394}\mbox{\hyperlink{namespaceutil_a2d640f1f28221d6aa6b9aacd805125b3}{00394}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespaceutil_a2d640f1f28221d6aa6b9aacd805125b3}{printHeader}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* text)\{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00395}00395         \textcolor{keywordtype}{size\_t} spaces\_needed = (80 -\/ \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{util::string::rawSize}}(text))/2 -\/2;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00396}00396 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00397}00397         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)033[96m"{}}; \textcolor{comment}{// set text and background colors}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00398}00398         std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n-\/"{}};}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00399}00399         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < spaces\_needed; ++i) \{ std::cout << \textcolor{stringliteral}{"{} "{}}; \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00400}00400         std::cout << text;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00401}00401         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < spaces\_needed; ++i) \{ std::cout << \textcolor{stringliteral}{"{} "{}}; \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00402}00402         std::cout << \textcolor{stringliteral}{"{} -\/\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00403}00403         std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00404}00404         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)033[0m"{}}; \textcolor{comment}{// reset text and background colors}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00342}\mbox{\hyperlink{classutil_1_1string_ad047d87e4c7430084515ad9c12e6a4dd}{00342}} std::ostream \&\mbox{\hyperlink{namespaceutil_a0ba3aab2318d3c284debce908db73718}{operator<<}}(std::ostream \&iostream, \textcolor{keyword}{const} \mbox{\hyperlink{classutil_1_1string}{util::string}} \&myString) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00343}00343   \textcolor{keywordflow}{return} (iostream << myString.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}());}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00344}00344 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00345}00345 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00346}00346 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00347}\mbox{\hyperlink{classutil_1_1string_a9e654bc70de99ff0711e7d06afe44244}{00347}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespaceutil_a3cee572eca0c7cee1b82eb9ecd9c3faa}{operator==}}(\textcolor{keyword}{const} std::string \&lhsString, \textcolor{keyword}{const} \mbox{\hyperlink{classutil_1_1string}{util::string}} \&rhsString) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00348}00348   \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00349}00349   \textcolor{keywordflow}{return} !\mbox{\hyperlink{classutil_1_1string_a075956e9e6e254474bd4e8f69bc0e9ea}{util::string::compare}}(lhsString.c\_str(), rhsString.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}());}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00350}00350 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00351}00351 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00352}\mbox{\hyperlink{classutil_1_1string_adf96580014b8bc3b2eddd7eb7eef9867}{00352}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespaceutil_a3cee572eca0c7cee1b82eb9ecd9c3faa}{operator==}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *lhsCharArray, \textcolor{keyword}{const} \mbox{\hyperlink{classutil_1_1string}{util::string}} \&rhsString) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00353}00353   \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00354}00354   \textcolor{keywordflow}{return} !\mbox{\hyperlink{classutil_1_1string_a075956e9e6e254474bd4e8f69bc0e9ea}{util::string::compare}}(lhsCharArray, rhsString.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}());}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00355}00355 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00356}00356 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00357}00357 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00358}\mbox{\hyperlink{classutil_1_1string_a6b3bf55e50a4ac41a58c8a501135c4f4}{00358}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespaceutil_ab1488ae992e5703bb0fc4d3ff416324e}{operator!=}}(\textcolor{keyword}{const} std::string \&lhsString, \textcolor{keyword}{const} \mbox{\hyperlink{classutil_1_1string}{util::string}} \&rhsString) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00359}00359   \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00360}00360   \textcolor{keywordflow}{return} \mbox{\hyperlink{classutil_1_1string_a075956e9e6e254474bd4e8f69bc0e9ea}{util::string::compare}}(lhsString.c\_str(), rhsString.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}());}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00361}00361 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00362}00362 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00363}\mbox{\hyperlink{classutil_1_1string_ab8449d924f6155c046266b4a2d9698e6}{00363}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespaceutil_ab1488ae992e5703bb0fc4d3ff416324e}{operator!=}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *lhsCharArray, \textcolor{keyword}{const} \mbox{\hyperlink{classutil_1_1string}{util::string}} \&rhsString) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00364}00364   \textcolor{comment}{// note that compare returns 0 when the two strings are equal}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00365}00365   \textcolor{keywordflow}{return} \mbox{\hyperlink{classutil_1_1string_a075956e9e6e254474bd4e8f69bc0e9ea}{util::string::compare}}(lhsCharArray, rhsString.\mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\_str}}());}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00366}00366 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00367}00367 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00368}00368 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00369}00369 \textcolor{comment}{/*=========================================================================*}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00370}00370 \textcolor{comment}{*             Some Utility functions                                      *}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00371}00371 \textcolor{comment}{*=========================================================================*/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00372}00372 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00386}\mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{00386}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{deepCopy}}(\textcolor{keywordtype}{char} *rawCharTarget, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *rawCharSource,}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00387}00387               \textcolor{keywordtype}{size\_t} destStartPosition, \textcolor{keywordtype}{size\_t} srcEndPosition) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00388}00388   \textcolor{comment}{// check and adjust for default values}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00389}00389   destStartPosition = (destStartPosition == -\/1)}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00390}00390                           ? \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{util::string::rawSize}}(rawCharTarget)}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00391}00391                           : destStartPosition;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00392}00392   srcEndPosition = (srcEndPosition == -\/1) ? \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{util::string::rawSize}}(rawCharSource)}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00393}00393                                           : srcEndPosition;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00394}00394 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00395}00395   \textcolor{comment}{// deep copy rawCharSource into rawCharTarget beginning at startPosition}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00396}00396   \textcolor{comment}{//        for (size\_t j = 0; rawCharSource[j] != '\(\backslash\)0'; ++j,}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00397}00397   \textcolor{comment}{//++destStartPosition) \{}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00398}00398   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} j = 0; j < srcEndPosition; ++j, ++destStartPosition) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00399}00399     rawCharTarget[destStartPosition] = rawCharSource[j];}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00400}00400   \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00401}00401 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00402}00402   \textcolor{comment}{// ensure destination string is null terminated}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00403}00403   rawCharTarget[destStartPosition] = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00404}00404 \}}
 \DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00405}00405 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00406}00406     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00407}00407 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00408}\mbox{\hyperlink{namespaceutil_a0cd6dff1a3ac1555425951b35597a45f}{00408}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespaceutil_a0cd6dff1a3ac1555425951b35597a45f}{printSubHeader}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* text) \{}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00409}00409         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)033[32m"{}}; \textcolor{comment}{// set text and background colors}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00410}00410         std::cout << text;}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00411}00411         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)033[0m\(\backslash\)n"{}}; \textcolor{comment}{// reset text and background colors}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00412}00412     \}}
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00413}00413 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00414}00414 }
-\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00415}00415 \}  \textcolor{comment}{// namespace util}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00406}00406 \textcolor{comment}{/*=========================================================================*}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00407}00407 \textcolor{comment}{ *      Some Utility functions for printing nice text output               *}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00408}00408 \textcolor{comment}{ *=========================================================================*/}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00409}00409 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00419}\mbox{\hyperlink{namespaceutil_a2d640f1f28221d6aa6b9aacd805125b3}{00419}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespaceutil_a2d640f1f28221d6aa6b9aacd805125b3}{printHeader}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *text) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00420}00420   \textcolor{keywordtype}{size\_t} spaces\_needed = (80 -\/ \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{util::string::rawSize}}(text)) / 2 -\/ 2;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00421}00421 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00422}00422   std::cout << \textcolor{stringliteral}{"{}\(\backslash\)033[1;30;106m"{}}; \textcolor{comment}{// set text and background colors}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00423}00423   std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n-\/"{}};}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00424}00424   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < spaces\_needed; ++i) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00425}00425     std::cout << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00426}00426   \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00427}00427   std::cout << text;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00428}00428   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < spaces\_needed; ++i) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00429}00429     std::cout << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00430}00430   \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00431}00431   std::cout << \textcolor{stringliteral}{"{} -\/\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00432}00432   std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00433}00433   std::cout << \textcolor{stringliteral}{"{}\(\backslash\)033[0m"{}}; \textcolor{comment}{// reset text and background colors}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00434}00434 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00435}00435 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00436}\mbox{\hyperlink{namespaceutil_a0cd6dff1a3ac1555425951b35597a45f}{00436}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespaceutil_a0cd6dff1a3ac1555425951b35597a45f}{printSubHeader}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *text) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00437}00437   std::cout << \textcolor{stringliteral}{"{}\(\backslash\)033[32m"{}}; \textcolor{comment}{// set text and background colors}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00438}00438   std::cout << text;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00439}00439   std::cout << \textcolor{stringliteral}{"{}\(\backslash\)033[0m\(\backslash\)n"{}}; \textcolor{comment}{// reset text and background colors}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00440}00440 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00441}00441 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00442}\mbox{\hyperlink{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}{00442}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}{printTestCase}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* text) \{}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00443}00443     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)033[93m  > ["{}}; \textcolor{comment}{// set text and background colors}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00444}00444     std::cout << text;}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00445}00445     std::cout << \textcolor{stringliteral}{"{}]\(\backslash\)033[0m \(\backslash\)t"{}}; \textcolor{comment}{// reset text and background colors}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00446}00446 \}}
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00447}00447 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00448}00448 }
+\DoxyCodeLine{\Hypertarget{utilstring_8cpp_source_l00449}00449 \} \textcolor{comment}{// namespace util}}
 
 \end{DoxyCode}

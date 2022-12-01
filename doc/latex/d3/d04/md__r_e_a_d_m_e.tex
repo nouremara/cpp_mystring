@@ -1,0 +1,69 @@
+\begin{quote}
+Implementation of Own String Class
+
+In this presents an implementation of a class named {\ttfamily \mbox{\hyperlink{classutil_1_1string}{util\+::string}}}. This class behavior is similar to the {\ttfamily std\+::string} and both {\ttfamily std\+::string} and this {\ttfamily \mbox{\hyperlink{classutil_1_1string}{util\+::string}}} class are compatible. \end{quote}
+Full and detailed examples of uses and tests of the class {\ttfamily \mbox{\hyperlink{classutil_1_1string}{util\+::string}}} are given in the {\ttfamily \mbox{\hyperlink{main_8cpp}{main.\+cpp}}} file. Each method and operator is very carefully tested (e.\+g., concatenating different strings, ..., etc).
+
+An example test run is shown in the following screenshot\+:
+
+
+
+Note that the {\bfseries{terminal output is colored}} (using \href{https://en.wikipedia.org/wiki/ANSI_escape_code}{\texttt{ ANSI escape codes}}) for better visibility.
+
+{\bfseries{Doxygen}} generated documentation (in html and La\+TeX formats) can be found at \href{doc/html/index.html}{\texttt{ {\ttfamily doc/html/index.\+html}}} and \href{doc/latex/refman.pdf}{\texttt{ {\ttfamily doc/latex/refman.\+pdf}}}, respectively. The configuration file {\ttfamily Doxyfile} is used with the Doxygen generation tool.
+
+The following design and implementation criteria are followed\+:
+\begin{DoxyItemize}
+\item {\bfseries{No C/\+C++ standard functions or classes are used}} to realize {\ttfamily \mbox{\hyperlink{classutil_1_1string}{util\+::string}}} class. This include, e.\+g., {\ttfamily strcmp}, {\ttfamily strlen} and of course using {\ttfamily std\+::string} as an internal representation of {\ttfamily \mbox{\hyperlink{classutil_1_1string}{util\+::string}}}.
+\begin{DoxyItemize}
+\item This means own functions/methods are developed and implemented to calculate the length of a {\ttfamily char$\ast$}, to compare character sequences or to copy them full or partially.
+\end{DoxyItemize}
+\item For now, {\bfseries{no error handling}} (e.\+g., accessing an invalid index by using operator \mbox{[}\mbox{]}) is implemented. This may be done later.
+\begin{DoxyItemize}
+\item {\bfseries{Use this class at your own risk}} \+:).
+\end{DoxyItemize}
+\item The code follows \href{https://llvm.org/docs/CodingStandards.html}{\texttt{ LLVM Coding Standards}}.
+\item The {\itshape \href{https://en.wikipedia.org/wiki/Snake_case}{\texttt{ sanke\+\_\+case}}} naming convention is used for variable and function names (with few exceptions).
+\item {\bfseries{Use this class at your own risk}} \+:).
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{General Functionality}\label{md__r_e_a_d_m_e_autotoc_md2}
+
+\begin{DoxyItemize}
+\item The class {\ttfamily \mbox{\hyperlink{classutil_1_1string}{util\+::string}}} is implemented inside the two files {\ttfamily \mbox{\hyperlink{utilstring_8cpp}{utilstring.\+cpp}}} and {\ttfamily \mbox{\hyperlink{utilstring_8h}{utilstring.\+h}}}
+\item Class string is within the namespace {\ttfamily util}
+\item The memory management is done by using a pointer ({\ttfamily internal\+\_\+buffer}) pointing to the data type char. {\ttfamily char$\ast$} are (normally) null terminated. This means, that the last character is always a {\ttfamily \textbackslash{}0} (NULL character) which marks the end of a char sequence. This character is never printed as it just allows for detecting whether the end of a char sequence has been reached. The string is always null-\/terminate (internally!)
+\item Initially, the class provides memory for 10 printable characters. Note that this default value is provided by the constant {\ttfamily INITIAL\+\_\+\+SIZE} (defined at the top of {\ttfamily \mbox{\hyperlink{utilstring_8h}{utilstring.\+h}}}). It can be changed if another value is desired.
+\item A relatively simple concept is designed and implemented to extend the internal memory if {\ttfamily \mbox{\hyperlink{classutil_1_1string}{util\+::string}}} has to store more than 10 characters.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{Constructors}\label{md__r_e_a_d_m_e_autotoc_md3}
+The following constructors are implemented\+:
+\begin{DoxyItemize}
+\item {\ttfamily string()} \+: Default constructor with empty initialization
+\item {\ttfamily string(size\+\_\+t intial\+Size= INITIAL\+\_\+\+SIZE)} \+: constructor with parameter for the initial memory size to initialization with.
+\item {\ttfamily string(const string\&)} \+: Copy constructor\+: Creates a deep copy of a passed string.
+\item {\ttfamily string(const char$\ast$)} \+: Constructor with parameter {\ttfamily const char$\ast$}.
+\item {\ttfamily string(const std\+::string\&)} \+: Constructor with parameter std\+::string.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{Operators}\label{md__r_e_a_d_m_e_autotoc_md4}
+The following operators are implemented\+:
+\begin{DoxyItemize}
+\item Operator + and += such that string, std\+::string and (const) char$\ast$ can be added
+\item Assignment operator = such that string, std\+::string and (const) char$\ast$ can be assigned
+\item Comparison operators == and != such that comparisons with {\ttfamily \mbox{\hyperlink{classutil_1_1string}{util\+::string}}}, {\ttfamily std\+::string} and {\ttfamily (const) char$\ast$} are possible. With respect to the last two cases, {\ttfamily std\+::string} and {\ttfamily const char$\ast$} may both be LHS as well as RHS arguments.
+\item operator \mbox{[}\mbox{]} to access individual characters of {\ttfamily \mbox{\hyperlink{classutil_1_1string}{util\+::string}}} object.
+\item Streaming operator \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} to print {\ttfamily \mbox{\hyperlink{classutil_1_1string}{util\+::string}}} to {\ttfamily std\+::cout}.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{Methods}\label{md__r_e_a_d_m_e_autotoc_md5}
+The following methods are implemented\+:
+\begin{DoxyItemize}
+\item {\ttfamily clear()}\+: Clears your string object
+\item {\ttfamily substr(pos, length)}\+: Returns a substring object of type \mbox{\hyperlink{classutil_1_1string}{util\+::string}} which starts at pos. Parameter length specifies the amount of characters of the new {\ttfamily \mbox{\hyperlink{classutil_1_1string}{util\+::string}}} to be returned.
+\item {\ttfamily length()}\+: Returns the amount of characters of your string excluding {\ttfamily \textbackslash{}0}. Might be smaller than the actual reserved memory.
+\item {\ttfamily c\+\_\+str()}\+: Allows raw access to the internal C-\/string respectively the {\ttfamily char$\ast$} pointer
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysection{References}\label{md__r_e_a_d_m_e_autotoc_md6}
+
+\begin{DoxyItemize}
+\item Standard Strings library \+: \href{https://en.cppreference.com/w/cpp/string}{\texttt{ https\+://en.\+cppreference.\+com/w/cpp/string}}
+\item C++ ISO Standard \href{https://isocpp.org/std/the-standard}{\texttt{ https\+://isocpp.\+org/std/the-\/standard}}
+\item C++ documentation -\/ Dev\+Docs \+: \href{https://devdocs.io/cpp/}{\texttt{ https\+://devdocs.\+io/cpp/}}
+\item LLVM Coding Standards\+: \href{https://llvm.org/docs/CodingStandards.html}{\texttt{ https\+://llvm.\+org/docs/\+Coding\+Standards.\+html}}
+\item sanke\+\_\+case convention \+: \href{https://en.wikipedia.org/wiki/Snake_case}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Snake\+\_\+case}}
+\item Markdown Basic Syntax \+: \href{https://www.markdownguide.org/basic-syntax}{\texttt{ https\+://www.\+markdownguide.\+org/basic-\/syntax}}
+\item Doxygen \+: \href{https://www.doxygen.nl/index.html}{\texttt{ https\+://www.\+doxygen.\+nl/index.\+html}} 
+\end{DoxyItemize}

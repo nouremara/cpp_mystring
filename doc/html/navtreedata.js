@@ -25,6 +25,13 @@
 var NAVTREE =
 [
   [ "NourUtilString", "index.html", [
+    [ "my_cpp_string", "d3/d04/md__r_e_a_d_m_e.html", [
+      [ "General Functionality", "d3/d04/md__r_e_a_d_m_e.html#autotoc_md2", null ],
+      [ "Constructors", "d3/d04/md__r_e_a_d_m_e.html#autotoc_md3", null ],
+      [ "Operators", "d3/d04/md__r_e_a_d_m_e.html#autotoc_md4", null ],
+      [ "Methods", "d3/d04/md__r_e_a_d_m_e.html#autotoc_md5", null ],
+      [ "References", "d3/d04/md__r_e_a_d_m_e.html#autotoc_md6", null ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -46,7 +53,6 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
