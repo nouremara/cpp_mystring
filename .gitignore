@@ -58,3 +58,9 @@ compile_commands.json
 *creator.user*
 
 *_qmlcache.qrc
+doc/latex/refman.toc
+doc/latex/refman.aux
+doc/latex/refman.log
+doc/latex/refman.idx
+doc/latex/refman.out
+doc/latex/refman.synctex.gz
