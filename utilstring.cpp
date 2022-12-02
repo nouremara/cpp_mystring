@@ -3,14 +3,14 @@
 // Assignment 1 – Own String Class
 
 /**========================================================================
- * @file        : utilstring.cpp
- * @brief       : implementation of own string class.
- * @author      : Nour Ahmed
- * @email       : nahmed@stud.hs-bremen.de, nourbrm02@gmail.com
- * @repo        : https://github.com/nouremara/cpp_mystring
- * @createdOn   : 23.11.2022
- * @version     : 1.0.0
- * @description : implementation of own string class
+ * @file        utilstring.cpp
+ * @brief       implementation of own string class.
+ * @author      Nour Ahmed
+ * @email       nahmed@stud.hs-bremen.de, nourbrm02@gmail.com
+ * @repo        https://github.com/nouremara/cpp_mystring
+ * @createdOn   23.11.2022
+ * @version     1.0.0
+ * @description implementation of own string class
  *
  * This file presents an implementation of a class named string.
  * This class behavior will be similar to the std::string and both
@@ -159,7 +159,7 @@ namespace util {
 
 		// ititasiate a util::string object to return
 		string substring(length);
-		
+
 		//fill the object with the desired substring
 		util::deepCopy(substring.c_str(), internal_buffer + start_position, 0, length);
 
@@ -263,7 +263,7 @@ namespace util {
 	char& string::operator[](size_t position) {
 		//if (position > size()) return '\0';
 		return internal_buffer[position];
-	} 
+	}
 	//-------------------------------------------------------------
 
 	string& string::operator+=(const string& rhsString) {
@@ -397,8 +397,10 @@ namespace util {
 	* srcEndPosition	  default is to last character (before the \0) of the
 	* srcRawChar
 	*/
-	void deepCopy(char* rawCharTarget, const char* rawCharSource,
-		size_t destStartPosition, size_t srcEndPosition) {
+	void deepCopy(char* rawCharTarget,
+				const char* rawCharSource,
+				size_t destStartPosition,
+				size_t srcEndPosition) {
 		// check and adjust for default values
 		destStartPosition = (destStartPosition == -1)
 			? util::string::rawSize(rawCharTarget)
@@ -407,8 +409,6 @@ namespace util {
 			: srcEndPosition;
 
 		// deep copy rawCharSource into rawCharTarget beginning at startPosition
-		//		for (size_t j = 0; rawCharSource[j] != '\0'; ++j,
-		//++destStartPosition) {
 		for (size_t j = 0; j < srcEndPosition; ++j, ++destStartPosition) {
 			rawCharTarget[destStartPosition] = rawCharSource[j];
 		}

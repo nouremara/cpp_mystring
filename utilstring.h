@@ -3,24 +3,20 @@
 // Assignment 1 – Own string Class
 
 /**========================================================================
- * @file      : utilstring.h
- * @brief     : implementation of own string class.
- * @author    : Nour Ahmed
- * @email     : nahmed@stud.hs-bremen.de, nour
- * @repo      : https://github.com/nouremara/cpp_mystring
- * @createdOn : 23.11.2022
- * @version   : 1.0.0
- * @description :
+ * @file      utilstring.h
+ * @brief     implementation of own string class.
+ * @author    Nour Ahmed
+ * @email     nahmed@stud.hs-bremen.de, nour
+ * @repo      https://github.com/nouremara/cpp_mystring
+ * @createdOn 23.11.2022
+ * @version   1.0.0
+ * @description
  *
  * This file presents an implementation of a class named string.
  * This class behavior will be similar and compatible to the std::string.
  * This file contains the prototypes for the class, its methods and eventually
  * any macros, constants, or global variables you will need to use it.
  *========================================================================**/
-
- // see: https://gist.github.com/philipheimboeck/099e540d800063e3e6ec
- // see: https://codereview.stackexchange.com/questions/98329/stdstring-implementation
- // see: https://en.wikipedia.org/wiki/Snake_case
 
 #ifndef UTILSTRING_H
 #define UTILSTRING_H
@@ -30,9 +26,19 @@
 #include <string>
 
 namespace util {
-	// Initially, the class shall provide memory for 10 printable characters
-#define INITIAL_SIZE 10
+/** Initially, the class shall provide memory for 10 printable characters
+* Note: value is implementation detail and subject to change
+*/
+#define INITIAL_SIZE 10 
 
+	/**
+	* @brief Implementation of of own string class.
+	*
+	* @description
+	*
+	* This class presents own string class implementation. This class behavior 
+	* will be similar and compatible to the std::string.
+	*/
 	class string {
 		char* internal_buffer;
 		size_t buffer_size;
@@ -75,7 +81,7 @@ namespace util {
 		 *                         Methods                                         *
 		 *=========================================================================*/
 		/**
-		* @brief Ensurea string is initialized before using it.
+		* @brief Ensure a string is initialized before using it.
 		* 
 		* @details
 		* initialize an empty string with buffer size of the given length.
@@ -133,7 +139,19 @@ namespace util {
 		char* c_str() const;
 		//-------------------------------------------------------------
 
-		//bool compare(const char* charArray) const;
+		/**
+		* Compares two char * strings lexicographically
+		* This function is my own implementation of the std::strcmp() function.
+		* Note this function performs a binary comparison of the ASCII code of the
+		*characters.
+		*
+		* @param s1   pointer to the primitive C string to be compared.
+		* @param s2   pointer to the primitive C string to be compared with.
+		* @return     an integral value indicating the relationship between the strings
+		* @retval < 0 The first character that does not match has a lower value in s1 than in s2
+		* @retval 0   The contents of both strings are equal 
+		* @retval > 0 The first character that does not match has a greater value in s1 than that in in s2
+		*/
 		static int compare(const char* s1, const char* s2);
 		//-------------------------------------------------------------
 
@@ -214,32 +232,73 @@ namespace util {
 		/*=========================================================================*
 		 *             Non-member function overloads                               *
 		 *=========================================================================*/
-		 // Free operator methods for the cases util::string is on the rhs
+		 // Free operator methods for the cases util::string is on the RHS
 		 // Friendship enables access to private members
 
 		/** Insert string into stream*/
 		friend std::ostream& operator<<(std::ostream& iostream, const util::string& myString);
 
+
+		/**
+		* Compares the contents of a string with another string, std::string, or
+		* a null - terminated array of char for equality.
+		* For the cases util::string is on the RHS.
+		*
+		* @relatesalso util::string
+		*/
 		friend bool operator==(const std::string& lhsString, const util::string& rhsString);
 		friend bool operator==(const char* lhsCharArray, const util::string& rhsString);
 
+		/**
+		* Compares the contents of a string with another string, std::string, or
+		* a null - terminated array of char for non-equality.
+		* For the cases util::string is on the RHS.
+		*
+		* @relatesalso util::string
+		*/
 		friend bool operator!=(const std::string& lhsString, const util::string& rhsString);
 		friend bool operator!=(const char* lhsCharArray, const util::string& rhsString);
 	};
 
+
 	/*=========================================================================*
 	 *             Some Utility functions                                      *
 	 *=========================================================================*/
-	 //void concat(char* rawCharTarget, char* rawCharSource, size_t startPosition = -1);
 
-	void deepCopy(char* rawCharTarget, const char* rawCharSource,
-		size_t destStartPosition = -1, size_t srcEndPosition = -1);
-
+	/**
+	* @brief Deep copy of primitive C-string into another primitive C-string.
+	*
+	* @details
+	* This function realizes a design and implementation of a concept to low-level
+	* copy and fill a primitive C-string with another primitive C-string starting 
+	* from a given start position and with a desired number of character from the 
+	* sourrce string.
+	* note that the function copy the passed char array starting from the
+	* startPosition (i.e. it can write starting from any position in the 
+	* destination string buffer) startPosition default is 0
+	*
+	* @relatesalso util::string
+	* @param rawCharTarget		pointer to the destination primitive C-string to copy to
+	* @param rawCharSource		pointer to the source primitive C-string to copy from
+	* @param destStartPosition	start position(in the target buffer) to start
+	*							copying the source string to [default: 0].
+	* @param srcEndPosition		end position (in the source string) to stop at 
+	*							[default: to the end of the source array].
+	*/
+	void deepCopy(char* rawCharTarget, 
+				  const char* rawCharSource,
+				  size_t destStartPosition = -1, 
+				  size_t srcEndPosition = -1);
 	//-----------------------------------------------
+	
+	/** @brief to print a nicely formated and colored text header to the terminal*/
 	void printHeader(const char* text);
+	
+	/** @brief to print a nicely formated and colored text sub header to the terminal*/
 	void printSubHeader(const char* text);
+	
+	/** @brief to print a nicely formated and colored text title header to the terminal*/
 	void printTestCase(const char* text);
-
 
 } // namespace util
 

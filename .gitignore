@@ -3,6 +3,8 @@
 # output and build artifacts
 debug/*
 release/*
+.vs/*
+out/*
 
 # C++ objects and libs
 *.slo
