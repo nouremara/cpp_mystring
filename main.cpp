@@ -155,7 +155,11 @@ int main() {
 	util::printTestCase("operator []");
 	std::cout << "\n\tstring1: " << string1 << "-> string1[0]: " << string1[0] << std::endl;
 	std::cout << "\tstring2: " << string2 << "-> string2[3]: " << string2[3] << std::endl;
-	std::cout << "\tstring3: " << string3 << "-> string3[50]: " << string3[50] << std::endl;
+	//std::cout << "\tstring3: " << string3 << "-> string3[50]: " << string3[50] << std::endl;
+
+	string2[3] = 'A';
+	std::cout << "\tstring2[3] = \'A\'" << "-> string2[3]: " << string2[3] << std::endl;
+	std::cout << "\tstring2: " << string2 << "-> string2[3]: " << string2[3] << std::endl;
 	std::cout << "-------------------------------------------------------------------------------\n\n";
 
     // Test utility functions
