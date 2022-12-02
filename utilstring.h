@@ -157,7 +157,7 @@ namespace util {
 
 		/**
 		 * Clears your string object
-		 * Erases the contents of the string, which becomes an empty string(with
+		 * Erases the contents of the string, which becomes an empty string (with
 		 * a length of 0 characters).
 		 */
 		void clear();
@@ -291,13 +291,13 @@ namespace util {
 				  size_t srcEndPosition = -1);
 	//-----------------------------------------------
 	
-	/** @brief to print a nicely formated and colored text header to the terminal*/
+	/** @brief to print a nicely formatted and colored text header to the terminal*/
 	void printHeader(const char* text);
 	
-	/** @brief to print a nicely formated and colored text sub header to the terminal*/
+	/** @brief to print a nicely formatted and colored text sub header to the terminal*/
 	void printSubHeader(const char* text);
 	
-	/** @brief to print a nicely formated and colored text title header to the terminal*/
+	/** @brief to print a nicely formatted and colored text title header to the terminal*/
 	void printTestCase(const char* text);
 
 } // namespace util

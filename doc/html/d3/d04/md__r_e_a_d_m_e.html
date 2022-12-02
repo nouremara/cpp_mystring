@@ -96,15 +96,15 @@ $(document).ready(function(){initNavTree('d3/d04/md__r_e_a_d_m_e.html','../../')
 <div class="contents">
 <div class="textblock"><blockquote class="doxtable">
 <p >&zwj;Implementation of Own String Class</p>
-<p >In this presents an implementation of a class named <code><a class="el" href="../../d6/d00/classutil_1_1string.html">util::string</a></code>. This class behavior is similar to the <code>std::string</code> and both <code>std::string</code> and this <code><a class="el" href="../../d6/d00/classutil_1_1string.html">util::string</a></code> class are compatible. </p>
+<p >In this presents an implementation of a class named <code><a class="el" href="../../d6/d00/classutil_1_1string.html" title="Implementation of of own string class.">util::string</a></code>. This class behavior is similar to the <code>std::string</code> and both <code>std::string</code> and this <code><a class="el" href="../../d6/d00/classutil_1_1string.html" title="Implementation of of own string class.">util::string</a></code> class are compatible. </p>
 </blockquote>
-<p>Full and detailed examples of uses and tests of the class <code><a class="el" href="../../d6/d00/classutil_1_1string.html">util::string</a></code> are given in the <code><a class="el" href="../../df/d02/main_8cpp.html" title=": test of own implementation of string class">main.cpp</a></code> file. Each method and operator is very carefully tested (e.g., concatenating different strings, ..., etc).</p>
+<p>Full and detailed examples of uses and tests of the class <code><a class="el" href="../../d6/d00/classutil_1_1string.html" title="Implementation of of own string class.">util::string</a></code> are given in the <code><a class="el" href="../../df/d02/main_8cpp.html" title=": test of own implementation of string class">main.cpp</a></code> file. Each method and operator is very carefully tested (e.g., concatenating different strings, ..., etc).</p>
 <p >An example test run is shown in the following screenshot:</p>
 <p ><img src="../../doc/figures/screenshot.png" alt="fishy" width="400px" class="inline"/></p>
 <p >Note that the <b>terminal output is colored</b> (using <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI escape codes</a>) for better visibility.</p>
 <p ><b>Doxygen</b> generated documentation (in html and LaTeX formats) can be found at <a href="../../doc/html/index.html"><code>doc/html/index.html</code></a> and <a href="../../doc/latex/refman.pdf"><code>doc/latex/refman.pdf</code></a>, respectively. The configuration file <code>Doxyfile</code> is used with the Doxygen generation tool.</p>
 <p >The following design and implementation criteria are followed:</p><ul>
-<li><b>No C/C++ standard functions or classes are used</b> to realize <code><a class="el" href="../../d6/d00/classutil_1_1string.html">util::string</a></code> class. This include, e.g., <code>strcmp</code>, <code>strlen</code> and of course using <code>std::string</code> as an internal representation of <code><a class="el" href="../../d6/d00/classutil_1_1string.html">util::string</a></code>.<ul>
+<li><b>No C/C++ standard functions or classes are used</b> to realize <code><a class="el" href="../../d6/d00/classutil_1_1string.html" title="Implementation of of own string class.">util::string</a></code> class. This include, e.g., <code>strcmp</code>, <code>strlen</code> and of course using <code>std::string</code> as an internal representation of <code><a class="el" href="../../d6/d00/classutil_1_1string.html" title="Implementation of of own string class.">util::string</a></code>.<ul>
 <li>This means own functions/methods are developed and implemented to calculate the length of a <code>char*</code>, to compare character sequences or to copy them full or partially.</li>
 </ul>
 </li>
@@ -119,17 +119,17 @@ $(document).ready(function(){initNavTree('d3/d04/md__r_e_a_d_m_e.html','../../')
 <h1><a class="anchor" id="autotoc_md2"></a>
 General Functionality</h1>
 <ul>
-<li>The class <code><a class="el" href="../../d6/d00/classutil_1_1string.html">util::string</a></code> is implemented inside the two files <code><a class="el" href="../../dd/d07/utilstring_8cpp.html" title=": implementation of own string class.">utilstring.cpp</a></code> and <code><a class="el" href="../../d4/d05/utilstring_8h.html" title=": implementation of own string class.">utilstring.h</a></code></li>
+<li>The class <code><a class="el" href="../../d6/d00/classutil_1_1string.html" title="Implementation of of own string class.">util::string</a></code> is implemented inside the two files <code><a class="el" href="../../dd/d07/utilstring_8cpp.html" title="implementation of own string class.">utilstring.cpp</a></code> and <code><a class="el" href="../../d4/d05/utilstring_8h.html" title="implementation of own string class.">utilstring.h</a></code></li>
 <li>Class string is within the namespace <code>util</code></li>
 <li>The memory management is done by using a pointer (<code>internal_buffer</code>) pointing to the data type char. <code>char*</code> are (normally) null terminated. This means, that the last character is always a <code>\0</code> (NULL character) which marks the end of a char sequence. This character is never printed as it just allows for detecting whether the end of a char sequence has been reached. The string is always null-terminate (internally!)</li>
-<li>Initially, the class provides memory for 10 printable characters. Note that this default value is provided by the constant <code>INITIAL_SIZE</code> (defined at the top of <code><a class="el" href="../../d4/d05/utilstring_8h.html" title=": implementation of own string class.">utilstring.h</a></code>). It can be changed if another value is desired.</li>
-<li>A relatively simple concept is designed and implemented to extend the internal memory if <code><a class="el" href="../../d6/d00/classutil_1_1string.html">util::string</a></code> has to store more than 10 characters.</li>
+<li>Initially, the class provides memory for 10 printable characters. Note that this default value is provided by the constant <code>INITIAL_SIZE</code> (defined at the top of <code><a class="el" href="../../d4/d05/utilstring_8h.html" title="implementation of own string class.">utilstring.h</a></code>). It can be changed if another value is desired.</li>
+<li>A relatively simple concept is designed and implemented to extend the internal memory if <code><a class="el" href="../../d6/d00/classutil_1_1string.html" title="Implementation of of own string class.">util::string</a></code> has to store more than 10 characters.</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md3"></a>
 Constructors</h1>
 <p >The following constructors are implemented:</p><ul>
 <li><code>string()</code> : Default constructor with empty initialization</li>
-<li><code>string(size_t intialSize= INITIAL_SIZE)</code> : constructor with parameter for the initial memory size to initialization with.</li>
+<li><code>string(size_t intialSize)</code> : constructor with parameter for the initial memory size to initialization with.</li>
 <li><code>string(const string&amp;)</code> : Copy constructor: Creates a deep copy of a passed string.</li>
 <li><code>string(const char*)</code> : Constructor with parameter <code>const char*</code>.</li>
 <li><code>string(const std::string&amp;)</code> : Constructor with parameter std::string.</li>
@@ -139,19 +139,44 @@ Operators</h1>
 <p >The following operators are implemented:</p><ul>
 <li>Operator + and += such that string, std::string and (const) char* can be added</li>
 <li>Assignment operator = such that string, std::string and (const) char* can be assigned</li>
-<li>Comparison operators == and != such that comparisons with <code><a class="el" href="../../d6/d00/classutil_1_1string.html">util::string</a></code>, <code>std::string</code> and <code>(const) char*</code> are possible. With respect to the last two cases, <code>std::string</code> and <code>const char*</code> may both be LHS as well as RHS arguments.</li>
-<li>operator [] to access individual characters of <code><a class="el" href="../../d6/d00/classutil_1_1string.html">util::string</a></code> object.</li>
-<li>Streaming operator &lt;&lt; to print <code><a class="el" href="../../d6/d00/classutil_1_1string.html">util::string</a></code> to <code>std::cout</code>.</li>
+<li>Comparison operators == and != such that comparisons with <code><a class="el" href="../../d6/d00/classutil_1_1string.html" title="Implementation of of own string class.">util::string</a></code>, <code>std::string</code> and <code>(const) char*</code> are possible. With respect to the last two cases, <code>std::string</code> and <code>const char*</code> may both be LHS as well as RHS arguments.</li>
+<li>operator [] to access individual characters of <code><a class="el" href="../../d6/d00/classutil_1_1string.html" title="Implementation of of own string class.">util::string</a></code> object.</li>
+<li>Streaming operator &lt;&lt; to print <code><a class="el" href="../../d6/d00/classutil_1_1string.html" title="Implementation of of own string class.">util::string</a></code> to <code>std::cout</code>.</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md5"></a>
 Methods</h1>
 <p >The following methods are implemented:</p><ul>
-<li><code>clear()</code>: Clears your string object</li>
-<li><code>substr(pos, length)</code>: Returns a substring object of type <a class="el" href="../../d6/d00/classutil_1_1string.html">util::string</a> which starts at pos. Parameter length specifies the amount of characters of the new <code><a class="el" href="../../d6/d00/classutil_1_1string.html">util::string</a></code> to be returned.</li>
+<li><p class="startli"><code>clear()</code>: Clears your string object.</p>
+<p class="startli">It erases the contents of the string, which becomes an empty string (with a length of 0 characters).</p>
+</li>
+<li><p class="startli"><code>substr(pos, length)</code>: Returns a substring object of type <a class="el" href="../../d6/d00/classutil_1_1string.html" title="Implementation of of own string class.">util::string</a> which starts at pos. Parameter length specifies the amount of characters of the new <code><a class="el" href="../../d6/d00/classutil_1_1string.html" title="Implementation of of own string class.">util::string</a></code> to be returned.</p>
+<p class="startli">The substring is the portion of the object that starts at character position start_position and spans len characters (or until the end of the string, whichever comes first).</p>
+</li>
 <li><code>length()</code>: Returns the amount of characters of your string excluding <code>\0</code>. Might be smaller than the actual reserved memory.</li>
-<li><code>c_str()</code>: Allows raw access to the internal C-string respectively the <code>char*</code> pointer</li>
+<li><code>size()</code>: (synonyme to <code>length()</code>) Returns the amount of characters of your string excluding <code>\0</code>. Might be smaller than the actual reserved memory.</li>
+<li><code>capacity()</code>: Returns the size of the storage space currently allocated for the string, expressed in terms of bytes.</li>
+<li><code>rawSize(const char* rawChar)</code> : Get the amount of characters of a raw char* string excluding the terminating <code>\0</code>.</li>
+<li><p class="startli"><code>c_str()</code>: Allows raw access to the internal C-string respectively the <code>char*</code> pointer.</p>
+<p class="startli">Returns a pointer to an array that contains a null-terminated sequence of characters (i.e., a C-string) representing the current value of the string object.</p>
+</li>
+<li><code>intialize_string(size_t length = 0)</code> Ensure a string is initialized before using it. It initialize an empty string with buffer size of the given length.</li>
+<li><p class="startli"><code>deepCopy(const char* rawChar, size_t startPosition = 0)</code>: Deep copy of primitive C-string into the string internal buffer.</p>
+<p class="startli">This function realizes a design and implementation of a concept to extend the internal memory if <a class="el" href="../../d6/d00/classutil_1_1string.html" title="Implementation of of own string class.">util::string</a> has to store more than its current allocated buffer size.</p>
+<p class="startli">Note that the function copy the passed char array starting from the startPosition (i.e. it can write starting from any position in the internal string buffer) startPosition default is 0</p>
+</li>
+<li><p class="startli"><code>compare(const char* s1, const char* s2)</code>: Compares two char * strings lexicographically.</p>
+<p class="startli">This function is my own implementation of the std::strcmp() function. Note this function performs a binary comparison of the ASCII code of the characters.</p>
+</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md6"></a>
+Non-member Functions</h1>
+<p >Some non-member utility functions are implemented that help for better functionality and output. These functions are:</p><ul>
+<li><p class="startli"><code>deepCopy(char* rawCharTarget, const char* rawCharSource, size_t destStartPosition, size_t srcEndPosition)</code> : Deep copy of primitive C-string into another primitive C-string. This function realizes a design and implementation of a concept to low-level copy and fill a primitive C-string with another primitive C-string starting from a given start position and with a desired number of character from the sourrce string.</p>
+<p class="startli">Note that the function copy the passed char array starting from the startPosition (i.e. it can write starting from any position in the destination string buffer) startPosition default is 0</p>
+</li>
+<li><code>printHeader(const char* text), printSubHeader(const char* text), printTestCase(const char* text)</code> : to print a nicely formatted and colored text header, sub header, title header, respectively to the terminal</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md7"></a>
 References</h1>
 <ul>
 <li>Standard Strings library : <a href="https://en.cppreference.com/w/cpp/string">https://en.cppreference.com/w/cpp/string</a></li>

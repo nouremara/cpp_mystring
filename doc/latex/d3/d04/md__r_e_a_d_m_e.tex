@@ -37,7 +37,7 @@ The following design and implementation criteria are followed\+:
 The following constructors are implemented\+:
 \begin{DoxyItemize}
 \item {\ttfamily string()} \+: Default constructor with empty initialization
-\item {\ttfamily string(size\+\_\+t intial\+Size= INITIAL\+\_\+\+SIZE)} \+: constructor with parameter for the initial memory size to initialization with.
+\item {\ttfamily string(size\+\_\+t intial\+Size)} \+: constructor with parameter for the initial memory size to initialization with.
 \item {\ttfamily string(const string\&)} \+: Copy constructor\+: Creates a deep copy of a passed string.
 \item {\ttfamily string(const char$\ast$)} \+: Constructor with parameter {\ttfamily const char$\ast$}.
 \item {\ttfamily string(const std\+::string\&)} \+: Constructor with parameter std\+::string.
@@ -52,11 +52,36 @@ The following operators are implemented\+:
 \end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{Methods}\label{md__r_e_a_d_m_e_autotoc_md5}
 The following methods are implemented\+:
 \begin{DoxyItemize}
-\item {\ttfamily clear()}\+: Clears your string object
+\item {\ttfamily clear()}\+: Clears your string object.
+
+It erases the contents of the string, which becomes an empty string (with a length of 0 characters).
 \item {\ttfamily substr(pos, length)}\+: Returns a substring object of type \mbox{\hyperlink{classutil_1_1string}{util\+::string}} which starts at pos. Parameter length specifies the amount of characters of the new {\ttfamily \mbox{\hyperlink{classutil_1_1string}{util\+::string}}} to be returned.
+
+The substring is the portion of the object that starts at character position start\+\_\+position and spans len characters (or until the end of the string, whichever comes first).
 \item {\ttfamily length()}\+: Returns the amount of characters of your string excluding {\ttfamily \textbackslash{}0}. Might be smaller than the actual reserved memory.
-\item {\ttfamily c\+\_\+str()}\+: Allows raw access to the internal C-\/string respectively the {\ttfamily char$\ast$} pointer
-\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysection{References}\label{md__r_e_a_d_m_e_autotoc_md6}
+\item {\ttfamily size()}\+: (synonyme to {\ttfamily length()}) Returns the amount of characters of your string excluding {\ttfamily \textbackslash{}0}. Might be smaller than the actual reserved memory.
+\item {\ttfamily capacity()}\+: Returns the size of the storage space currently allocated for the string, expressed in terms of bytes.
+\item {\ttfamily raw\+Size(const char$\ast$ raw\+Char)} \+: Get the amount of characters of a raw char$\ast$ string excluding the terminating {\ttfamily \textbackslash{}0}.
+\item {\ttfamily c\+\_\+str()}\+: Allows raw access to the internal C-\/string respectively the {\ttfamily char$\ast$} pointer.
+
+Returns a pointer to an array that contains a null-\/terminated sequence of characters (i.\+e., a C-\/string) representing the current value of the string object.
+\item {\ttfamily intialize\+\_\+string(size\+\_\+t length = 0)} Ensure a string is initialized before using it. It initialize an empty string with buffer size of the given length.
+\item {\ttfamily deep\+Copy(const char$\ast$ raw\+Char, size\+\_\+t start\+Position = 0)}\+: Deep copy of primitive C-\/string into the string internal buffer.
+
+This function realizes a design and implementation of a concept to extend the internal memory if \mbox{\hyperlink{classutil_1_1string}{util\+::string}} has to store more than its current allocated buffer size.
+
+Note that the function copy the passed char array starting from the start\+Position (i.\+e. it can write starting from any position in the internal string buffer) start\+Position default is 0
+\item {\ttfamily compare(const char$\ast$ s1, const char$\ast$ s2)}\+: Compares two char $\ast$ strings lexicographically.
+
+This function is my own implementation of the std\+::strcmp() function. Note this function performs a binary comparison of the ASCII code of the characters.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysection{Non-\/member Functions}\label{md__r_e_a_d_m_e_autotoc_md6}
+Some non-\/member utility functions are implemented that help for better functionality and output. These functions are\+:
+\begin{DoxyItemize}
+\item {\ttfamily deep\+Copy(char$\ast$ raw\+Char\+Target, const char$\ast$ raw\+Char\+Source, size\+\_\+t dest\+Start\+Position, size\+\_\+t src\+End\+Position)} \+: Deep copy of primitive C-\/string into another primitive C-\/string. This function realizes a design and implementation of a concept to low-\/level copy and fill a primitive C-\/string with another primitive C-\/string starting from a given start position and with a desired number of character from the sourrce string.
+
+Note that the function copy the passed char array starting from the start\+Position (i.\+e. it can write starting from any position in the destination string buffer) start\+Position default is 0
+\item {\ttfamily print\+Header(const char$\ast$ text), print\+Sub\+Header(const char$\ast$ text), print\+Test\+Case(const char$\ast$ text)} \+: to print a nicely formatted and colored text header, sub header, title header, respectively to the terminal
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{References}\label{md__r_e_a_d_m_e_autotoc_md7}
 
 \begin{DoxyItemize}
 \item Standard Strings library \+: \href{https://en.cppreference.com/w/cpp/string}{\texttt{ https\+://en.\+cppreference.\+com/w/cpp/string}}

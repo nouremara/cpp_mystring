@@ -70,7 +70,7 @@
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00086}00086     \mbox{\hyperlink{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}{util::printTestCase}}(\textcolor{stringliteral}{"{}capacity()"{}});}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00087}00087     std::cout << \textcolor{stringliteral}{"{}string2 (size: "{}} << string2.\mbox{\hyperlink{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}{size}}() << \textcolor{stringliteral}{"{}, capacity: "{}} << string2.\mbox{\hyperlink{classutil_1_1string_a83518ec9da087c03b1e6c8c424acf136}{capacity}}() << \textcolor{stringliteral}{"{}) : "{}} << string2 << std::endl;}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00088}00088 }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00089}00089     \mbox{\hyperlink{classutil_1_1string}{util::string}} temp = string2.\mbox{\hyperlink{classutil_1_1string_adc44a4bd6f589afd37123121db8597fe}{substr}}(3, 5);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00089}00089     \mbox{\hyperlink{classutil_1_1string}{util::string}} temp = string2.\mbox{\hyperlink{classutil_1_1string_a239ebfdf70484c52bf93f598d3153ba8}{substr}}(3, 5);}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00090}00090     \mbox{\hyperlink{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}{util::printTestCase}}(\textcolor{stringliteral}{"{}substr()"{}});}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00091}00091     std::cout << \textcolor{stringliteral}{"{}string2.substr(3,5) \(\backslash\)t -\/> "{}} << temp << std::endl;}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00092}00092 }
@@ -139,36 +139,40 @@
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00155}00155     \mbox{\hyperlink{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}{util::printTestCase}}(\textcolor{stringliteral}{"{}operator []"{}});}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00156}00156     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)tstring1: "{}} << string1 << \textcolor{stringliteral}{"{}-\/> string1[0]: "{}} << string1[0] << std::endl;}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00157}00157     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)tstring2: "{}} << string2 << \textcolor{stringliteral}{"{}-\/> string2[3]: "{}} << string2[3] << std::endl;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00158}00158     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)tstring3: "{}} << string3 << \textcolor{stringliteral}{"{}-\/> string3[50]: "{}} << string3[50] << std::endl;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00159}00159     std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00160}00160 }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00161}00161     \textcolor{comment}{// Test utility functions}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00162}00162     \mbox{\hyperlink{namespaceutil_a0cd6dff1a3ac1555425951b35597a45f}{util::printSubHeader}}(\textcolor{stringliteral}{"{}Test utility functions"{}});}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00163}00163     }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00164}00164     \textcolor{keywordtype}{char} s1[100] = \textcolor{stringliteral}{"{}programming "{}}, s2[] = \textcolor{stringliteral}{"{}is awesome"{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00165}00165     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)ts1 (size: "{}} << \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{util::string::rawSize}}(s1) << \textcolor{stringliteral}{"{}, capacity: 100) : content: "{}} << s1 << std::endl;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00166}00166     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)ts2 (size: "{}} << \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{util::string::rawSize}}(s2) << \textcolor{stringliteral}{"{}, capacity: "{}}<< \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{util::string::rawSize}}(s2)+1 <<\textcolor{stringliteral}{"{}) : content: "{}} << s2 << std::endl;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00167}00167 }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00168}00168     \mbox{\hyperlink{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}{util::printTestCase}}(\textcolor{stringliteral}{"{}util::deepCopy()"{}});}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00169}00169     \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{util::deepCopy}}(s1, s2);}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00170}00170     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)tdeepCopy(s1, s2) -\/> s1 (size: "{}} << \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{util::string::rawSize}}(s1) << \textcolor{stringliteral}{"{}, capacity: 100) : content: "{}} << s1 << std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00158}00158     \textcolor{comment}{//std::cout << "{}\(\backslash\)tstring3: "{} << string3 << "{}-\/> string3[50]: "{} << string3[50] << std::endl;}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00159}00159 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00160}00160     string2[3] = \textcolor{charliteral}{'A'};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00161}00161     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)tstring2[3] = \(\backslash\)'A\(\backslash\)'"{}} << \textcolor{stringliteral}{"{}-\/> string2[3]: "{}} << string2[3] << std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00162}00162     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)tstring2: "{}} << string2 << \textcolor{stringliteral}{"{}-\/> string2[3]: "{}} << string2[3] << std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00163}00163     std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00164}00164 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00165}00165     \textcolor{comment}{// Test utility functions}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00166}00166     \mbox{\hyperlink{namespaceutil_a0cd6dff1a3ac1555425951b35597a45f}{util::printSubHeader}}(\textcolor{stringliteral}{"{}Test utility functions"{}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00167}00167     }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00168}00168     \textcolor{keywordtype}{char} s1[100] = \textcolor{stringliteral}{"{}programming "{}}, s2[] = \textcolor{stringliteral}{"{}is awesome"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00169}00169     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)ts1 (size: "{}} << \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{util::string::rawSize}}(s1) << \textcolor{stringliteral}{"{}, capacity: 100) : content: "{}} << s1 << std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00170}00170     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)ts2 (size: "{}} << \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{util::string::rawSize}}(s2) << \textcolor{stringliteral}{"{}, capacity: "{}}<< \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{util::string::rawSize}}(s2)+1 <<\textcolor{stringliteral}{"{}) : content: "{}} << s2 << std::endl;}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00171}00171 }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00172}00172     \mbox{\hyperlink{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}{util::printTestCase}}(\textcolor{stringliteral}{"{}util::rawSize()"{}});}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00173}00173     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)tutil::string::rawSize(s1) -\/> "{}} << \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{util::string::rawSize}}(s1) << std::endl;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00174}00174 }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00175}00175     \mbox{\hyperlink{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}{util::printTestCase}}(\textcolor{stringliteral}{"{}util::string::compare()"{}});}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00176}00176     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)tutil::string::compare(s1,s2) -\/> "{}} << \mbox{\hyperlink{classutil_1_1string_a075956e9e6e254474bd4e8f69bc0e9ea}{util::string::compare}}(s1, s2) << std::endl;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00177}00177     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)tutil::string::compare(s1,s1) -\/> "{}} << \mbox{\hyperlink{classutil_1_1string_a075956e9e6e254474bd4e8f69bc0e9ea}{util::string::compare}}(s1, s1) << std::endl;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00178}00178     std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00179}00179 }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00180}00180     \mbox{\hyperlink{namespaceutil_a0cd6dff1a3ac1555425951b35597a45f}{util::printSubHeader}}(\textcolor{stringliteral}{"{}Test utility functions"{}});}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00181}00181     \mbox{\hyperlink{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}{util::printTestCase}}(\textcolor{stringliteral}{"{}util::printHeader()"{}});      std::cout << std::endl;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00182}00182     \mbox{\hyperlink{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}{util::printTestCase}}(\textcolor{stringliteral}{"{}util::printSubHeader()"{}});  std::cout << std::endl;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00183}00183     \mbox{\hyperlink{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}{util::printTestCase}}(\textcolor{stringliteral}{"{}util::printTestCase()"{}});   std::cout << std::endl;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00184}00184     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)tThese functions are used to print the above colored headers :)"{}} << std::endl;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00185}00185     std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00186}00186 }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00187}00187     \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00188}00188 \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00172}00172     \mbox{\hyperlink{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}{util::printTestCase}}(\textcolor{stringliteral}{"{}util::deepCopy()"{}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00173}00173     \mbox{\hyperlink{namespaceutil_ae3b5f8cc0eb2a253b85952a30e31538e}{util::deepCopy}}(s1, s2);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00174}00174     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)tdeepCopy(s1, s2) -\/> s1 (size: "{}} << \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{util::string::rawSize}}(s1) << \textcolor{stringliteral}{"{}, capacity: 100) : content: "{}} << s1 << std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00175}00175 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00176}00176     \mbox{\hyperlink{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}{util::printTestCase}}(\textcolor{stringliteral}{"{}util::rawSize()"{}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00177}00177     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)tutil::string::rawSize(s1) -\/> "{}} << \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}{util::string::rawSize}}(s1) << std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00178}00178 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00179}00179     \mbox{\hyperlink{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}{util::printTestCase}}(\textcolor{stringliteral}{"{}util::string::compare()"{}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00180}00180     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)tutil::string::compare(s1,s2) -\/> "{}} << \mbox{\hyperlink{classutil_1_1string_a075956e9e6e254474bd4e8f69bc0e9ea}{util::string::compare}}(s1, s2) << std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00181}00181     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)tutil::string::compare(s1,s1) -\/> "{}} << \mbox{\hyperlink{classutil_1_1string_a075956e9e6e254474bd4e8f69bc0e9ea}{util::string::compare}}(s1, s1) << std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00182}00182     std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00183}00183 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00184}00184     \mbox{\hyperlink{namespaceutil_a0cd6dff1a3ac1555425951b35597a45f}{util::printSubHeader}}(\textcolor{stringliteral}{"{}Test utility functions"{}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00185}00185     \mbox{\hyperlink{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}{util::printTestCase}}(\textcolor{stringliteral}{"{}util::printHeader()"{}});      std::cout << std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00186}00186     \mbox{\hyperlink{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}{util::printTestCase}}(\textcolor{stringliteral}{"{}util::printSubHeader()"{}});  std::cout << std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00187}00187     \mbox{\hyperlink{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}{util::printTestCase}}(\textcolor{stringliteral}{"{}util::printTestCase()"{}});   std::cout << std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00188}00188     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)tThese functions are used to print the above colored headers :)"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00189}00189     std::cout << \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00190}00190 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00191}00191     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00192}00192 \}}
 
 \end{DoxyCode}

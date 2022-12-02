@@ -4,7 +4,7 @@
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classutil_1_1string}{string}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Implementation of of own string class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -18,30 +18,49 @@ bool \mbox{\hyperlink{namespaceutil_ab1488ae992e5703bb0fc4d3ff416324e}{operator!
 \item 
 bool \mbox{\hyperlink{namespaceutil_ad86672dee0d1e24a85369ab88cea0c51}{operator!=}} (const char $\ast$lhs\+Char\+Array, const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&rhs\+String)
 \item 
-void \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{deep\+Copy}} (char $\ast$raw\+Char\+Target, const char $\ast$raw\+Char\+Source, size\+\_\+t dest\+Start\+Position, size\+\_\+t src\+End\+Position)
-\item 
+void \mbox{\hyperlink{namespaceutil_ae3b5f8cc0eb2a253b85952a30e31538e}{deep\+Copy}} (char $\ast$raw\+Char\+Target, const char $\ast$raw\+Char\+Source, size\+\_\+t dest\+Start\+Position=-\/1, size\+\_\+t src\+End\+Position=-\/1)
+\begin{DoxyCompactList}\small\item\em Deep copy of primitive C-\/string into another primitive C-\/string. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespaceutil_a2d640f1f28221d6aa6b9aacd805125b3}{print\+Header}} (const char $\ast$text)
-\item 
+\begin{DoxyCompactList}\small\item\em to print a nicely formatted and colored text header to the terminal \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespaceutil_a0cd6dff1a3ac1555425951b35597a45f}{print\+Sub\+Header}} (const char $\ast$text)
-\item 
+\begin{DoxyCompactList}\small\item\em to print a nicely formatted and colored text sub header to the terminal \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}{print\+Test\+Case}} (const char $\ast$text)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em to print a nicely formatted and colored text title header to the terminal \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}\label{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}} 
+\mbox{\Hypertarget{namespaceutil_ae3b5f8cc0eb2a253b85952a30e31538e}\label{namespaceutil_ae3b5f8cc0eb2a253b85952a30e31538e}} 
 \index{util@{util}!deepCopy@{deepCopy}}
 \index{deepCopy@{deepCopy}!util@{util}}
 \doxysubsubsection{\texorpdfstring{deepCopy()}{deepCopy()}}
-{\footnotesize\ttfamily void util\+::deep\+Copy (\begin{DoxyParamCaption}\item[{char $\ast$}]{raw\+Char\+Target,  }\item[{const char $\ast$}]{raw\+Char\+Source,  }\item[{size\+\_\+t}]{dest\+Start\+Position,  }\item[{size\+\_\+t}]{src\+End\+Position }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void deep\+Copy (\begin{DoxyParamCaption}\item[{char $\ast$}]{raw\+Char\+Target,  }\item[{const char $\ast$}]{raw\+Char\+Source,  }\item[{size\+\_\+t}]{dest\+Start\+Position,  }\item[{size\+\_\+t}]{src\+End\+Position }\end{DoxyParamCaption})}
+
+
+
+Deep copy of primitive C-\/string into another primitive C-\/string. 
 
 fill raw\+Char\+Target with raw\+Char\+Source starting from start\+Position
 
 Notes\+: \texorpdfstring{$>$}{>} raw\+Char\+Target contents will be changed \texorpdfstring{$>$}{>} the raw\+Char\+Target is assumed to be big enough to hold the raw\+Char\+Source (i.\+e., its size is larger than or equal to that of the raw\+Char\+Source)
 
-dest\+Start\+Position default is to first location of the dest\+Raw\+Char src\+End\+Position default is to last character (before the \textbackslash{}0) of the src\+Raw\+Char 
+dest\+Start\+Position default is to first location of the dest\+Raw\+Char src\+End\+Position default is to last character (before the \textbackslash{}0) of the src\+Raw\+Char
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00386}{386}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+This function realizes a design and implementation of a concept to low-\/level copy and fill a primitive C-\/string with another primitive C-\/string starting from a given start position and with a desired number of character from the sourrce string. note that the function copy the passed char array starting from the start\+Position (i.\+e. it can write starting from any position in the destination string buffer) start\+Position default is 0
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+Char\+Target} & pointer to the destination primitive C-\/string to copy to \\
+\hline
+{\em raw\+Char\+Source} & pointer to the source primitive C-\/string to copy from \\
+\hline
+{\em dest\+Start\+Position} & start position(in the target buffer) to start copying the source string to \mbox{[}default\+: 0\mbox{]}. \\
+\hline
+{\em src\+End\+Position} & end position (in the source string) to stop at \mbox{[}default\+: to the end of the source array\mbox{]}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00400}{400}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{namespaceutil_ad86672dee0d1e24a85369ab88cea0c51}\label{namespaceutil_ad86672dee0d1e24a85369ab88cea0c51}} 
 \index{util@{util}!operator"!=@{operator"!=}}
@@ -51,17 +70,17 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00386}{386}} of file
 
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00363}{363}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00377}{377}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{namespaceutil_ab1488ae992e5703bb0fc4d3ff416324e}\label{namespaceutil_ab1488ae992e5703bb0fc4d3ff416324e}} 
 \index{util@{util}!operator"!=@{operator"!=}}
 \index{operator"!=@{operator"!=}!util@{util}}
 \doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily bool util\+::operator!= (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{lhs\+String,  }\item[{const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&}]{rhs\+String }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool util\+::operator!= (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{lhs\+String,  }\item[{const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&}]{rhs\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [related]}}
 
+Compares the contents of a string with another string, std\+::string, or a null -\/ terminated array of char for non-\/equality. For the cases \mbox{\hyperlink{classutil_1_1string}{util\+::string}} is on the RHS. 
 
-
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00358}{358}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00372}{372}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{namespaceutil_a0ba3aab2318d3c284debce908db73718}\label{namespaceutil_a0ba3aab2318d3c284debce908db73718}} 
 \index{util@{util}!operator$<$$<$@{operator$<$$<$}}
@@ -69,9 +88,9 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00358}{358}} of file
 \doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
 {\footnotesize\ttfamily std\+::ostream \& util\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{iostream,  }\item[{const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&}]{my\+String }\end{DoxyParamCaption})}
 
+Insert string into stream 
 
-
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00342}{342}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00356}{356}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{namespaceutil_a9a9987eba9df6310a3aa16cb92566da2}\label{namespaceutil_a9a9987eba9df6310a3aa16cb92566da2}} 
 \index{util@{util}!operator==@{operator==}}
@@ -81,17 +100,17 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00342}{342}} of file
 
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00352}{352}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00366}{366}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{namespaceutil_a3cee572eca0c7cee1b82eb9ecd9c3faa}\label{namespaceutil_a3cee572eca0c7cee1b82eb9ecd9c3faa}} 
 \index{util@{util}!operator==@{operator==}}
 \index{operator==@{operator==}!util@{util}}
 \doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily bool util\+::operator== (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{lhs\+String,  }\item[{const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&}]{rhs\+String }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool util\+::operator== (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{lhs\+String,  }\item[{const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&}]{rhs\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [related]}}
 
+Compares the contents of a string with another string, std\+::string, or a null -\/ terminated array of char for equality. For the cases \mbox{\hyperlink{classutil_1_1string}{util\+::string}} is on the RHS. 
 
-
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00347}{347}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00361}{361}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{namespaceutil_a2d640f1f28221d6aa6b9aacd805125b3}\label{namespaceutil_a2d640f1f28221d6aa6b9aacd805125b3}} 
 \index{util@{util}!printHeader@{printHeader}}
@@ -99,11 +118,15 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00347}{347}} of file
 \doxysubsubsection{\texorpdfstring{printHeader()}{printHeader()}}
 {\footnotesize\ttfamily void util\+::print\+Header (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text }\end{DoxyParamCaption})}
 
+
+
+to print a nicely formatted and colored text header to the terminal 
+
 utility functions for printing nice text output
 
 ANSI Escape Sequences are used to color the console text, it works for windows and Linux. For Windows, you need to run the program in the new terminal as the old one does not support these codes. see\+: \href{https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797}{\texttt{ https\+://gist.\+github.\+com/fnky/458719343aabd01cfb17a3a4f7296797}} 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00419}{419}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00433}{433}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{namespaceutil_a0cd6dff1a3ac1555425951b35597a45f}\label{namespaceutil_a0cd6dff1a3ac1555425951b35597a45f}} 
 \index{util@{util}!printSubHeader@{printSubHeader}}
@@ -113,7 +136,11 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00419}{419}} of file
 
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00436}{436}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+to print a nicely formatted and colored text sub header to the terminal 
+
+
+
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00450}{450}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}\label{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}} 
 \index{util@{util}!printTestCase@{printTestCase}}
@@ -123,5 +150,9 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00436}{436}} of file
 
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00442}{442}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+to print a nicely formatted and colored text title header to the terminal 
+
+
+
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00456}{456}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 

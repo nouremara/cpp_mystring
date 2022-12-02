@@ -2,7 +2,7 @@
 \label{utilstring_8h}\index{utilstring.h@{utilstring.h}}
 
 
-\+: implementation of own string class.  
+implementation of own string class.  
 
 
 {\ttfamily \#include $<$cstddef$>$}\newline
@@ -12,7 +12,7 @@
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classutil_1_1string}{util\+::string}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Implementation of of own string class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -26,28 +26,28 @@ namespace \mbox{\hyperlink{namespaceutil}{util}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{namespaceutil_aea28135b2b5d0d6c594a71d9b4e533e1}{util\+::deep\+Copy}} (char $\ast$raw\+Char\+Target, const char $\ast$raw\+Char\+Source, size\+\_\+t dest\+Start\+Position, size\+\_\+t src\+End\+Position)
-\item 
+void \mbox{\hyperlink{namespaceutil_ae3b5f8cc0eb2a253b85952a30e31538e}{util\+::deep\+Copy}} (char $\ast$raw\+Char\+Target, const char $\ast$raw\+Char\+Source, size\+\_\+t dest\+Start\+Position=-\/1, size\+\_\+t src\+End\+Position=-\/1)
+\begin{DoxyCompactList}\small\item\em Deep copy of primitive C-\/string into another primitive C-\/string. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespaceutil_a2d640f1f28221d6aa6b9aacd805125b3}{util\+::print\+Header}} (const char $\ast$text)
-\item 
+\begin{DoxyCompactList}\small\item\em to print a nicely formatted and colored text header to the terminal \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespaceutil_a0cd6dff1a3ac1555425951b35597a45f}{util\+::print\+Sub\+Header}} (const char $\ast$text)
-\item 
+\begin{DoxyCompactList}\small\item\em to print a nicely formatted and colored text sub header to the terminal \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespaceutil_a106a5b0be34ad130931d45b61cceb6f5}{util\+::print\+Test\+Case}} (const char $\ast$text)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em to print a nicely formatted and colored text title header to the terminal \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-\+: implementation of own string class. 
+implementation of own string class. 
 
 ========================================================================
 
 \begin{DoxyAuthor}{Author}
-\+: Nour Ahmed @email \+: \href{mailto:nahmed@stud.hs-bremen.de}{\texttt{ nahmed@stud.\+hs-\/bremen.\+de}}, nour @repo \+: \href{https://github.com/nouremara/cpp_mystring}{\texttt{ https\+://github.\+com/nouremara/cpp\+\_\+mystring}} @created\+On \+: 23.\+11.\+2022 
+Nour Ahmed @email \href{mailto:nahmed@stud.hs-bremen.de}{\texttt{ nahmed@stud.\+hs-\/bremen.\+de}}, nour @repo \href{https://github.com/nouremara/cpp_mystring}{\texttt{ https\+://github.\+com/nouremara/cpp\+\_\+mystring}} @created\+On 23.\+11.\+2022 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-\+: 1.\+0.\+0 @description \+:
+1.\+0.\+0 @description
 \end{DoxyVersion}
-This file presents an implementation of a class named string. This class behavior will be similar and compatible to the std\+::string. This file contains the prototypes for the class, its methods and eventually \hypertarget{utilstring_8h_autotoc_md8}{}\doxysubsection{any macros, constants, or global variables you will need to use it.}\label{utilstring_8h_autotoc_md8}
+This file presents an implementation of a class named string. This class behavior will be similar and compatible to the std\+::string. This file contains the prototypes for the class, its methods and eventually \hypertarget{utilstring_8h_autotoc_md9}{}\doxysubsection{any macros, constants, or global variables you will need to use it.}\label{utilstring_8h_autotoc_md9}
 
 
 Definition in file \mbox{\hyperlink{utilstring_8h_source}{utilstring.\+h}}.
@@ -61,7 +61,7 @@ Definition in file \mbox{\hyperlink{utilstring_8h_source}{utilstring.\+h}}.
 \doxysubsubsection{\texorpdfstring{INITIAL\_SIZE}{INITIAL\_SIZE}}
 {\footnotesize\ttfamily \#define INITIAL\+\_\+\+SIZE~10}
 
+Initially, the class shall provide memory for 10 printable characters Note\+: value is implementation detail and subject to change 
 
-
-Definition at line \mbox{\hyperlink{utilstring_8h_source_l00030}{30}} of file \mbox{\hyperlink{utilstring_8h_source}{utilstring.\+h}}.
+Definition at line \mbox{\hyperlink{utilstring_8h_source_l00032}{32}} of file \mbox{\hyperlink{utilstring_8h_source}{utilstring.\+h}}.
 

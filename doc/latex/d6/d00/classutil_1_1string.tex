@@ -2,29 +2,36 @@
 \label{classutil_1_1string}\index{util::string@{util::string}}
 
 
+Implementation of of own string class.  
+
+
+
+
 {\ttfamily \#include $<$utilstring.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classutil_1_1string_a5e3c607d0c3d144867f6e238ce9e44c3}{string}} (size\+\_\+t intial\+Size=\mbox{\hyperlink{utilstring_8h_a40958a1382463445e451148e3a93e049}{INITIAL\+\_\+\+SIZE}})
+\mbox{\hyperlink{classutil_1_1string_a9f2d7d071fffe85bb49abca9211f5d18}{string}} ()
 \item 
-\mbox{\hyperlink{classutil_1_1string_acc20885275cd7e7f53016704a17609bf}{string}} (const char $\ast$)
+\mbox{\hyperlink{classutil_1_1string_a19c1ec7d2ccce77d1deff52608ed9ef9}{string}} (size\+\_\+t intial\+Size)
 \item 
-\mbox{\hyperlink{classutil_1_1string_a1a9518adf0c1525fd7fe22d87f2b072d}{string}} (const std\+::string \&)
+\mbox{\hyperlink{classutil_1_1string_ae922e02d6efc0b46431ba1bd27f5ce7f}{string}} (const char $\ast$char\+Array)
+\item 
+\mbox{\hyperlink{classutil_1_1string_a58ca9b020d8b8164b0de6d2e46ea1856}{string}} (const std\+::string \&std\+\_\+string)
 \item 
 \mbox{\hyperlink{classutil_1_1string_afbd2c00b7ac16ab996c2363236212d70}{string}} (const \mbox{\hyperlink{classutil_1_1string}{string}} \&)
 \item 
 \mbox{\hyperlink{classutil_1_1string_adfd21832f78feb76eec524a454704378}{$\sim$string}} (void)
 \item 
 void \mbox{\hyperlink{classutil_1_1string_af67829c6107e0ae1287b20d738bc03b5}{intialize\+\_\+string}} (size\+\_\+t \mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}}=0)
-\item 
+\begin{DoxyCompactList}\small\item\em Ensure a string is initialized before using it. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classutil_1_1string_a2b35163fa77f59bb7f726aa336b1df09}{deep\+Copy}} (const char $\ast$raw\+Char, size\+\_\+t start\+Position=0)
-\item 
-\mbox{\hyperlink{classutil_1_1string}{string}} \mbox{\hyperlink{classutil_1_1string_adc44a4bd6f589afd37123121db8597fe}{substr}} (size\+\_\+t pos, size\+\_\+t \mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}})
-\item 
+\begin{DoxyCompactList}\small\item\em Deep copy of primitive C-\/string into the string internal buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classutil_1_1string}{string}} \mbox{\hyperlink{classutil_1_1string_a239ebfdf70484c52bf93f598d3153ba8}{substr}} (size\+\_\+t start\+\_\+position, size\+\_\+t \mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}})
+\begin{DoxyCompactList}\small\item\em Returns a newly constructed \mbox{\hyperlink{classutil_1_1string}{util\+::string}} object with a portion of the string. \end{DoxyCompactList}\item 
 char $\ast$ \mbox{\hyperlink{classutil_1_1string_acda64b2f3aaee822b0e5843620a423e4}{c\+\_\+str}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Allows raw access to the internal C-\/string (through its char$\ast$ pointer) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classutil_1_1string_a03b58579ea56e57f2cc73523a37fab3e}{clear}} ()
 \item 
 size\+\_\+t \mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length}} () const
@@ -63,7 +70,7 @@ bool \mbox{\hyperlink{classutil_1_1string_aaaad9443e1e9da0d33b5589952743133}{ope
 \item 
 bool \mbox{\hyperlink{classutil_1_1string_a9ff055142c9f31218388793246198856}{operator!=}} (const char $\ast$char\+Array)
 \item 
-const char \mbox{\hyperlink{classutil_1_1string_aa427b61b6003128a0d25c31064f5cd28}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t position)
+char \& \mbox{\hyperlink{classutil_1_1string_abe786f0bf3a8a8fac427c4533f0f8e2b}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t position)
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -77,29 +84,38 @@ static size\+\_\+t \mbox{\hyperlink{classutil_1_1string_af83c06ae0a41aad8ed77db2
 \item 
 std\+::ostream \& \mbox{\hyperlink{classutil_1_1string_ad047d87e4c7430084515ad9c12e6a4dd}{operator$<$$<$}} (std\+::ostream \&iostream, const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&my\+String)
 \item 
-bool \mbox{\hyperlink{classutil_1_1string_a9e654bc70de99ff0711e7d06afe44244}{operator==}} (const std\+::string \&lhs\+String, const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&rhs\+String)
-\item 
 bool \mbox{\hyperlink{classutil_1_1string_adf96580014b8bc3b2eddd7eb7eef9867}{operator==}} (const char $\ast$lhs\+Char\+Array, const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&rhs\+String)
-\item 
-bool \mbox{\hyperlink{classutil_1_1string_a6b3bf55e50a4ac41a58c8a501135c4f4}{operator!=}} (const std\+::string \&lhs\+String, const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&rhs\+String)
 \item 
 bool \mbox{\hyperlink{classutil_1_1string_ab8449d924f6155c046266b4a2d9698e6}{operator!=}} (const char $\ast$lhs\+Char\+Array, const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&rhs\+String)
 \end{DoxyCompactItemize}
+\doxysubsection*{Related Functions}
+(Note that these are not member functions.) \begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classutil_1_1string_a9e654bc70de99ff0711e7d06afe44244}{operator==}} (const std\+::string \&lhs\+String, const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&rhs\+String)
+\item 
+bool \mbox{\hyperlink{classutil_1_1string_a6b3bf55e50a4ac41a58c8a501135c4f4}{operator!=}} (const std\+::string \&lhs\+String, const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&rhs\+String)
+\item 
+void \mbox{\hyperlink{classutil_1_1string_ae3b5f8cc0eb2a253b85952a30e31538e}{deep\+Copy}} (char $\ast$raw\+Char\+Target, const char $\ast$raw\+Char\+Source, size\+\_\+t dest\+Start\+Position=-\/1, size\+\_\+t src\+End\+Position=-\/1)
+\begin{DoxyCompactList}\small\item\em Deep copy of primitive C-\/string into another primitive C-\/string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+Implementation of of own string class. 
 
+@description
 
-Definition at line \mbox{\hyperlink{utilstring_8h_source_l00032}{32}} of file \mbox{\hyperlink{utilstring_8h_source}{utilstring.\+h}}.
+This class presents own string class implementation. This class behavior will be similar and compatible to the std\+::string. 
+
+Definition at line \mbox{\hyperlink{utilstring_8h_source_l00042}{42}} of file \mbox{\hyperlink{utilstring_8h_source}{utilstring.\+h}}.
 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classutil_1_1string_a5e3c607d0c3d144867f6e238ce9e44c3}\label{classutil_1_1string_a5e3c607d0c3d144867f6e238ce9e44c3}} 
+\mbox{\Hypertarget{classutil_1_1string_a9f2d7d071fffe85bb49abca9211f5d18}\label{classutil_1_1string_a9f2d7d071fffe85bb49abca9211f5d18}} 
 \index{util::string@{util::string}!string@{string}}
 \index{string@{string}!util::string@{util::string}}
-\doxysubsubsection{\texorpdfstring{string()}{string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
-{\footnotesize\ttfamily util\+::string\+::string (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{intial\+Size = {\ttfamily \mbox{\hyperlink{utilstring_8h_a40958a1382463445e451148e3a93e049}{INITIAL\+\_\+\+SIZE}}} }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{string()}{string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily util\+::string\+::string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 default constructor with empty initialization
 
@@ -107,37 +123,65 @@ Default Constructor
 
 Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
-\mbox{\Hypertarget{classutil_1_1string_acc20885275cd7e7f53016704a17609bf}\label{classutil_1_1string_acc20885275cd7e7f53016704a17609bf}} 
+\mbox{\Hypertarget{classutil_1_1string_a19c1ec7d2ccce77d1deff52608ed9ef9}\label{classutil_1_1string_a19c1ec7d2ccce77d1deff52608ed9ef9}} 
 \index{util::string@{util::string}!string@{string}}
 \index{string@{string}!util::string@{util::string}}
-\doxysubsubsection{\texorpdfstring{string()}{string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
-{\footnotesize\ttfamily util\+::string\+::string (\begin{DoxyParamCaption}\item[{const char $\ast$}]{data }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{string()}{string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily util\+::string\+::string (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{intial\+Size }\end{DoxyParamCaption})}
 
-Constructor with parameter const char$\ast$
+Constructor with a given initial size 
+\begin{DoxyParams}{Parameters}
+{\em intial\+Size} & number of bytes (characters) to intialize the string with.\\
+\hline
+\end{DoxyParams}
+Constructor with a given initial size 
 
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+
+\mbox{\Hypertarget{classutil_1_1string_ae922e02d6efc0b46431ba1bd27f5ce7f}\label{classutil_1_1string_ae922e02d6efc0b46431ba1bd27f5ce7f}} 
+\index{util::string@{util::string}!string@{string}}
+\index{string@{string}!util::string@{util::string}}
+\doxysubsubsection{\texorpdfstring{string()}{string()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily util\+::string\+::string (\begin{DoxyParamCaption}\item[{const char $\ast$}]{char\+Array }\end{DoxyParamCaption})}
+
+Constructor with parameter const char$\ast$ 
+\begin{DoxyParams}{Parameters}
+{\em char\+Array} & primitive C-\/string to intialize the string with.\\
+\hline
+\end{DoxyParams}
 Constructor with char$\ast$ 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
-\mbox{\Hypertarget{classutil_1_1string_a1a9518adf0c1525fd7fe22d87f2b072d}\label{classutil_1_1string_a1a9518adf0c1525fd7fe22d87f2b072d}} 
+\mbox{\Hypertarget{classutil_1_1string_a58ca9b020d8b8164b0de6d2e46ea1856}\label{classutil_1_1string_a58ca9b020d8b8164b0de6d2e46ea1856}} 
 \index{util::string@{util::string}!string@{string}}
 \index{string@{string}!util::string@{util::string}}
-\doxysubsubsection{\texorpdfstring{string()}{string()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
-{\footnotesize\ttfamily util\+::string\+::string (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{string()}{string()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily util\+::string\+::string (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{std\+\_\+string }\end{DoxyParamCaption})}
 
 Constructor with parameter std\+::string 
+\begin{DoxyParams}{Parameters}
+{\em std\+\_\+string} & c++ std\+::string to intialize the string with.\\
+\hline
+\end{DoxyParams}
+Constructor with parameter std\+::string 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00044}{44}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_afbd2c00b7ac16ab996c2363236212d70}\label{classutil_1_1string_afbd2c00b7ac16ab996c2363236212d70}} 
 \index{util::string@{util::string}!string@{string}}
 \index{string@{string}!util::string@{util::string}}
-\doxysubsubsection{\texorpdfstring{string()}{string()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+\doxysubsubsection{\texorpdfstring{string()}{string()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
 {\footnotesize\ttfamily util\+::string\+::string (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classutil_1_1string}{string}} \&}]{data }\end{DoxyParamCaption})}
 
 Copy constructor\+: Creates a deep copy of a passed string 
+\begin{DoxyParams}{Parameters}
+{\em std\+\_\+string} & c++ \mbox{\hyperlink{classutil_1_1string}{util\+::string}} to intialize the string with.\\
+\hline
+\end{DoxyParams}
+Copy constructor\+: Creates a deep copy of a passed string 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_adfd21832f78feb76eec524a454704378}\label{classutil_1_1string_adfd21832f78feb76eec524a454704378}} 
 \index{util::string@{util::string}!````~string@{$\sim$string}}
@@ -145,9 +189,9 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00048}{48}} of file 
 \doxysubsubsection{\texorpdfstring{$\sim$string()}{~string()}}
 {\footnotesize\ttfamily util\+::string\+::$\sim$string (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
+Destructor to do the final cleanup and memory deallocation 
 
-
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00063}{63}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 
 
@@ -160,7 +204,14 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00057}{57}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00137}{137}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Allows raw access to the internal C-\/string (through its char$\ast$ pointer) 
+
+Returns a pointer to an array that contains a null-\/terminated sequence of characters (i.\+e., a C-\/string) representing the current value of the string object. \begin{DoxyReturn}{Returns}
+Returns a pointer to an array that contains a null-\/terminated sequence of characters. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00143}{143}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_a83518ec9da087c03b1e6c8c424acf136}\label{classutil_1_1string_a83518ec9da087c03b1e6c8c424acf136}} 
 \index{util::string@{util::string}!capacity@{capacity}}
@@ -170,7 +221,7 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00137}{137}} of file
 
 Returns the size of the storage space currently allocated for the string, expressed in terms of bytes. 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00080}{80}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00086}{86}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_a03b58579ea56e57f2cc73523a37fab3e}\label{classutil_1_1string_a03b58579ea56e57f2cc73523a37fab3e}} 
 \index{util::string@{util::string}!clear@{clear}}
@@ -178,11 +229,9 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00080}{80}} of file 
 \doxysubsubsection{\texorpdfstring{clear()}{clear()}}
 {\footnotesize\ttfamily void util\+::string\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Clears your string object Erases the contents of the string, which becomes an empty string(with a length of 0 characters).
-
 Clears your string object Erases the contents of the string, which becomes an empty string (with a length of 0 characters). 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00090}{90}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00096}{96}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_a075956e9e6e254474bd4e8f69bc0e9ea}\label{classutil_1_1string_a075956e9e6e254474bd4e8f69bc0e9ea}} 
 \index{util::string@{util::string}!compare@{compare}}
@@ -190,6 +239,27 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00090}{90}} of file 
 \doxysubsubsection{\texorpdfstring{compare()}{compare()}}
 {\footnotesize\ttfamily int util\+::string\+::compare (\begin{DoxyParamCaption}\item[{const char $\ast$}]{lhs\+Char\+Array,  }\item[{const char $\ast$}]{rhs\+Char\+Array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+Compares two char $\ast$ strings lexicographically This function is my own implementation of the std\+::strcmp() function. Note this function performs a binary comparison of the ASCII code of the characters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & pointer to the primitive C string to be compared. \\
+\hline
+{\em s2} & pointer to the primitive C string to be compared with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an integral value indicating the relationship between the strings 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em $<$} & 0 The first character that does not match has a lower value in s1 than in s2 \\
+\hline
+{\em 0} & The contents of both strings are equal \\
+\hline
+{\em $>$} & 0 The first character that does not match has a greater value in s1 than that in in s2\\
+\hline
+\end{DoxyRetVals}
 Compares two char $\ast$ strings lexicographically This function is my own implementation of the std\+::strcmp() function. Note this function performs a binary comparison of the ASCII code of the characters.
 
 
@@ -204,7 +274,7 @@ an integral value indicating the relationship between the strings\+: \texorpdfst
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00169}{169}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00184}{184}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_a2b35163fa77f59bb7f726aa336b1df09}\label{classutil_1_1string_a2b35163fa77f59bb7f726aa336b1df09}} 
 \index{util::string@{util::string}!deepCopy@{deepCopy}}
@@ -212,9 +282,22 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00169}{169}} of file
 \doxysubsubsection{\texorpdfstring{deepCopy()}{deepCopy()}}
 {\footnotesize\ttfamily void util\+::string\+::deep\+Copy (\begin{DoxyParamCaption}\item[{const char $\ast$}]{raw\+Char,  }\item[{size\+\_\+t}]{start\+Position = {\ttfamily 0} }\end{DoxyParamCaption})}
 
+
+
+Deep copy of primitive C-\/string into the string internal buffer. 
+
+This function realizes a design and implementation of a concept to extend the internal memory if \mbox{\hyperlink{classutil_1_1string}{util\+::string}} has to store more than its current allocated buffer size. note that the function copy the passed char array starting from the start\+Position (i.\+e. it can write starting from any position in the internal string buffer) start\+Position default is 0
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+Char} & pointer to the primitive C-\/string to copy to the internal buffer. \\
+\hline
+{\em start\+Position} & start position (in the target buffer) to start copying the source string to \mbox{[}default\+: 0\mbox{]}.\\
+\hline
+\end{DoxyParams}
 Design and implementation of a concept to extend the internal memory if \mbox{\hyperlink{classutil_1_1string}{util\+::string}} has to store more than the default INITIAL\+\_\+\+SIZE characters note that the function copy the passed char array starting from the start\+Position (i.\+e. it can write starting from any position in the internal string buffer) start\+Position default is 0 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00114}{114}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00120}{120}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_af67829c6107e0ae1287b20d738bc03b5}\label{classutil_1_1string_af67829c6107e0ae1287b20d738bc03b5}} 
 \index{util::string@{util::string}!intialize\_string@{intialize\_string}}
@@ -224,7 +307,18 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00114}{114}} of file
 
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00063}{63}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Ensure a string is initialized before using it. 
+
+initialize an empty string with buffer size of the given length.
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & number of bytes (characters) to allocate in memory for the internal buffer. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00069}{69}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}\label{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}} 
 \index{util::string@{util::string}!length@{length}}
@@ -234,7 +328,7 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00063}{63}} of file 
 
 Returns the amount of characters of your string excluding \textbackslash{}0. Might be smaller than the actual reserved memory. 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00073}{73}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00079}{79}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_a9ff055142c9f31218388793246198856}\label{classutil_1_1string_a9ff055142c9f31218388793246198856}} 
 \index{util::string@{util::string}!operator"!=@{operator"!=}}
@@ -244,7 +338,7 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00073}{73}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00240}{240}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00255}{255}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_aaaad9443e1e9da0d33b5589952743133}\label{classutil_1_1string_aaaad9443e1e9da0d33b5589952743133}} 
 \index{util::string@{util::string}!operator"!=@{operator"!=}}
@@ -254,7 +348,7 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00240}{240}} of file
 
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00233}{233}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00248}{248}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_a0210feef657db2717f93a06dfa6c4618}\label{classutil_1_1string_a0210feef657db2717f93a06dfa6c4618}} 
 \index{util::string@{util::string}!operator"!=@{operator"!=}}
@@ -262,9 +356,9 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00233}{233}} of file
 \doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily bool util\+::string\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classutil_1_1string}{string}} \&}]{rhs\+String }\end{DoxyParamCaption})}
 
+Compares the contents of a string with another string, std\+::string, or a null -\/ terminated array of char for non-\/equality. 
 
-
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00227}{227}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00242}{242}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_acc16abe6236845fbb044be11b05e4a1f}\label{classutil_1_1string_acc16abe6236845fbb044be11b05e4a1f}} 
 \index{util::string@{util::string}!operator+@{operator+}}
@@ -274,7 +368,7 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00227}{227}} of file
 
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00328}{328}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00342}{342}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_a576be22224f3ceef1f6c13eb761bea74}\label{classutil_1_1string_a576be22224f3ceef1f6c13eb761bea74}} 
 \index{util::string@{util::string}!operator+@{operator+}}
@@ -284,7 +378,7 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00328}{328}} of file
 
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00318}{318}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00332}{332}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_aa7f004d6a0b389dcbb480d822991fb50}\label{classutil_1_1string_aa7f004d6a0b389dcbb480d822991fb50}} 
 \index{util::string@{util::string}!operator+@{operator+}}
@@ -294,7 +388,7 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00318}{318}} of file
 
 Operator + such that string, std\+::string and (const) char$\ast$ can be added 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00308}{308}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00322}{322}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_a831f361edac660ef1c87bcc6f2bc374a}\label{classutil_1_1string_a831f361edac660ef1c87bcc6f2bc374a}} 
 \index{util::string@{util::string}!operator+=@{operator+=}}
@@ -304,7 +398,7 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00308}{308}} of file
 
 concatenating \mbox{\hyperlink{classutil_1_1string}{util\+::string}} and const char$\ast$ 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00292}{292}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00306}{306}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_af667ec9e20da9e086ecfd81a9c54e297}\label{classutil_1_1string_af667ec9e20da9e086ecfd81a9c54e297}} 
 \index{util::string@{util::string}!operator+=@{operator+=}}
@@ -314,7 +408,7 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00292}{292}} of file
 
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00273}{273}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00287}{287}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_a9aeb1cfd19ff76aa937d9b2dffaa4356}\label{classutil_1_1string_a9aeb1cfd19ff76aa937d9b2dffaa4356}} 
 \index{util::string@{util::string}!operator+=@{operator+=}}
@@ -324,7 +418,7 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00273}{273}} of file
 
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00255}{255}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00269}{269}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_a9bf4bac337e92b6f7d2c899961b7ae02}\label{classutil_1_1string_a9bf4bac337e92b6f7d2c899961b7ae02}} 
 \index{util::string@{util::string}!operator=@{operator=}}
@@ -334,7 +428,7 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00255}{255}} of file
 
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00195}{195}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00210}{210}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_a0cb70d52c64ade9dfd1e51a05553f312}\label{classutil_1_1string_a0cb70d52c64ade9dfd1e51a05553f312}} 
 \index{util::string@{util::string}!operator=@{operator=}}
@@ -344,7 +438,7 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00195}{195}} of file
 
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00200}{200}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00215}{215}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_aadfe94866d85a083a57bd6f20c3367ab}\label{classutil_1_1string_aadfe94866d85a083a57bd6f20c3367ab}} 
 \index{util::string@{util::string}!operator=@{operator=}}
@@ -352,9 +446,9 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00200}{200}} of file
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classutil_1_1string}{string}} \& util\+::string\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classutil_1_1string}{string}} \&}]{rhs\+String }\end{DoxyParamCaption})}
 
+Assigns a new value to the string, replacing its current contents. 
 
-
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00190}{190}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00205}{205}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_ab9e9cd60802d763d685fa14b933aac26}\label{classutil_1_1string_ab9e9cd60802d763d685fa14b933aac26}} 
 \index{util::string@{util::string}!operator==@{operator==}}
@@ -364,7 +458,7 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00190}{190}} of file
 
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00219}{219}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00234}{234}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_a838347628be8990b09535e2c11f76480}\label{classutil_1_1string_a838347628be8990b09535e2c11f76480}} 
 \index{util::string@{util::string}!operator==@{operator==}}
@@ -374,7 +468,7 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00219}{219}} of file
 
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00212}{212}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00227}{227}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_a47ecf38cdbd749c1a320727413bb6071}\label{classutil_1_1string_a47ecf38cdbd749c1a320727413bb6071}} 
 \index{util::string@{util::string}!operator==@{operator==}}
@@ -382,19 +476,19 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00212}{212}} of file
 \doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily bool util\+::string\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classutil_1_1string}{string}} \&}]{rhs\+String }\end{DoxyParamCaption})}
 
+Compares the contents of a string with another string, std\+::string, or a null -\/ terminated array of char for equality. 
 
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00221}{221}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00206}{206}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
-
-\mbox{\Hypertarget{classutil_1_1string_aa427b61b6003128a0d25c31064f5cd28}\label{classutil_1_1string_aa427b61b6003128a0d25c31064f5cd28}} 
+\mbox{\Hypertarget{classutil_1_1string_abe786f0bf3a8a8fac427c4533f0f8e2b}\label{classutil_1_1string_abe786f0bf3a8a8fac427c4533f0f8e2b}} 
 \index{util::string@{util::string}!operator\mbox{[}\mbox{]}@{operator[]}}
 \index{operator\mbox{[}\mbox{]}@{operator[]}!util::string@{util::string}}
 \doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
-{\footnotesize\ttfamily const char util\+::string\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{position }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily char \& util\+::string\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{position }\end{DoxyParamCaption})}
 
+Returns a reference to the character at position pos in the string. 
 
-
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00248}{248}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00263}{263}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}\label{classutil_1_1string_af83c06ae0a41aad8ed77db2d709c25b6}} 
 \index{util::string@{util::string}!rawSize@{rawSize}}
@@ -404,7 +498,7 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00248}{248}} of file
 
 Get the amount of characters of a raw char$\ast$ string excluding the terminating \textbackslash{}0. 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00097}{97}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00103}{103}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}\label{classutil_1_1string_a1886c0a3762d683d3d747d55f061c1fd}} 
 \index{util::string@{util::string}!size@{size}}
@@ -414,21 +508,64 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00097}{97}} of file 
 
 Get the length of the string synonyme to \mbox{\hyperlink{classutil_1_1string_ac5766787c64699cdd83f766b5b07dcc2}{length()}} 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00078}{78}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
-\mbox{\Hypertarget{classutil_1_1string_adc44a4bd6f589afd37123121db8597fe}\label{classutil_1_1string_adc44a4bd6f589afd37123121db8597fe}} 
+\mbox{\Hypertarget{classutil_1_1string_a239ebfdf70484c52bf93f598d3153ba8}\label{classutil_1_1string_a239ebfdf70484c52bf93f598d3153ba8}} 
 \index{util::string@{util::string}!substr@{substr}}
 \index{substr@{substr}!util::string@{util::string}}
 \doxysubsubsection{\texorpdfstring{substr()}{substr()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classutil_1_1string}{string}} util\+::string\+::substr (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pos,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classutil_1_1string}{string}} util\+::string\+::substr (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{start\+\_\+position,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00146}{146}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Returns a newly constructed \mbox{\hyperlink{classutil_1_1string}{util\+::string}} object with a portion of the string. 
+
+The substring is the portion of the object that starts at character position start\+\_\+position and spans len characters (or until the end of the string, whichever comes first).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em start\+\_\+position} & start position in the source string. \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & specifies the amount of characters of the new \mbox{\hyperlink{classutil_1_1string}{util\+::string}} to be returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a substring object of type \mbox{\hyperlink{classutil_1_1string}{util\+::string}} which starts at pos 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00152}{152}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 
 
 \doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classutil_1_1string_ae3b5f8cc0eb2a253b85952a30e31538e}\label{classutil_1_1string_ae3b5f8cc0eb2a253b85952a30e31538e}} 
+\index{util::string@{util::string}!deepCopy@{deepCopy}}
+\index{deepCopy@{deepCopy}!util::string@{util::string}}
+\doxysubsubsection{\texorpdfstring{deepCopy()}{deepCopy()}}
+{\footnotesize\ttfamily void deep\+Copy (\begin{DoxyParamCaption}\item[{char $\ast$}]{raw\+Char\+Target,  }\item[{const char $\ast$}]{raw\+Char\+Source,  }\item[{size\+\_\+t}]{dest\+Start\+Position = {\ttfamily -\/1},  }\item[{size\+\_\+t}]{src\+End\+Position = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [related]}}
+
+
+
+Deep copy of primitive C-\/string into another primitive C-\/string. 
+
+This function realizes a design and implementation of a concept to low-\/level copy and fill a primitive C-\/string with another primitive C-\/string starting from a given start position and with a desired number of character from the sourrce string. note that the function copy the passed char array starting from the start\+Position (i.\+e. it can write starting from any position in the destination string buffer) start\+Position default is 0
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+Char\+Target} & pointer to the destination primitive C-\/string to copy to \\
+\hline
+{\em raw\+Char\+Source} & pointer to the source primitive C-\/string to copy from \\
+\hline
+{\em dest\+Start\+Position} & start position(in the target buffer) to start copying the source string to \mbox{[}default\+: 0\mbox{]}. \\
+\hline
+{\em src\+End\+Position} & end position (in the source string) to stop at \mbox{[}default\+: to the end of the source array\mbox{]}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00400}{400}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+
 \mbox{\Hypertarget{classutil_1_1string_ab8449d924f6155c046266b4a2d9698e6}\label{classutil_1_1string_ab8449d924f6155c046266b4a2d9698e6}} 
 \index{util::string@{util::string}!operator"!=@{operator"!=}}
 \index{operator"!=@{operator"!=}!util::string@{util::string}}
@@ -437,7 +574,7 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00146}{146}} of file
 
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00363}{363}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00377}{377}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_a6b3bf55e50a4ac41a58c8a501135c4f4}\label{classutil_1_1string_a6b3bf55e50a4ac41a58c8a501135c4f4}} 
 \index{util::string@{util::string}!operator"!=@{operator"!=}}
@@ -445,9 +582,9 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00363}{363}} of file
 \doxysubsubsection{\texorpdfstring{operator"!=}{operator!=}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool operator!= (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{lhs\+String,  }\item[{const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&}]{rhs\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
+Compares the contents of a string with another string, std\+::string, or a null -\/ terminated array of char for non-\/equality. For the cases \mbox{\hyperlink{classutil_1_1string}{util\+::string}} is on the RHS. 
 
-
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00358}{358}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00372}{372}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_ad047d87e4c7430084515ad9c12e6a4dd}\label{classutil_1_1string_ad047d87e4c7430084515ad9c12e6a4dd}} 
 \index{util::string@{util::string}!operator$<$$<$@{operator$<$$<$}}
@@ -455,9 +592,9 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00358}{358}} of file
 \doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
 {\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{iostream,  }\item[{const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&}]{my\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
+Insert string into stream 
 
-
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00342}{342}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00356}{356}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_adf96580014b8bc3b2eddd7eb7eef9867}\label{classutil_1_1string_adf96580014b8bc3b2eddd7eb7eef9867}} 
 \index{util::string@{util::string}!operator==@{operator==}}
@@ -467,7 +604,7 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00342}{342}} of file
 
 
 
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00352}{352}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00366}{366}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 \mbox{\Hypertarget{classutil_1_1string_a9e654bc70de99ff0711e7d06afe44244}\label{classutil_1_1string_a9e654bc70de99ff0711e7d06afe44244}} 
 \index{util::string@{util::string}!operator==@{operator==}}
@@ -475,9 +612,9 @@ Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00352}{352}} of file
 \doxysubsubsection{\texorpdfstring{operator==}{operator==}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{lhs\+String,  }\item[{const \mbox{\hyperlink{classutil_1_1string}{util\+::string}} \&}]{rhs\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
+Compares the contents of a string with another string, std\+::string, or a null -\/ terminated array of char for equality. For the cases \mbox{\hyperlink{classutil_1_1string}{util\+::string}} is on the RHS. 
 
-
-Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00347}{347}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
+Definition at line \mbox{\hyperlink{utilstring_8cpp_source_l00361}{361}} of file \mbox{\hyperlink{utilstring_8cpp_source}{utilstring.\+cpp}}.
 
 
 

@@ -1,7 +1,7 @@
 var namespaceutil =
 [
     [ "string", "d6/d00/classutil_1_1string.html", "d6/d00/classutil_1_1string" ],
-    [ "deepCopy", "d6/d02/namespaceutil.html#aea28135b2b5d0d6c594a71d9b4e533e1", null ],
+    [ "deepCopy", "d6/d02/namespaceutil.html#ae3b5f8cc0eb2a253b85952a30e31538e", null ],
     [ "operator!=", "d6/d02/namespaceutil.html#ad86672dee0d1e24a85369ab88cea0c51", null ],
     [ "operator!=", "d6/d02/namespaceutil.html#ab1488ae992e5703bb0fc4d3ff416324e", null ],
     [ "operator<<", "d6/d02/namespaceutil.html#a0ba3aab2318d3c284debce908db73718", null ],
