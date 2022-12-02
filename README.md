@@ -91,7 +91,10 @@ Some non-member utility functions are implemented that help for better functiona
 
   Note that the function copy the passed char array starting from the startPosition (i.e. it can write starting from any position in the destination string buffer) startPosition default is 0
 
-* `printHeader(const char* text), printSubHeader(const char* text), printTestCase(const char* text)` : to print a nicely formatted and colored text header, sub header, title header, respectively to the terminal
+* `printHeader(const char* text)`,\
+  `printSubHeader(const char* text)`,\
+  `printTestCase(const char* text)` : \
+  To print a nicely formatted and colored text header, sub header, title header, respectively to the terminal
 
 
 ## References
